@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgba(0, 0, 6, 0.900);
+    position: relative;
+    width: 100%;
+    height: 100%; 
+    opacity: 0;
+    animation: show 1s forwards; 
+}
+
+@keyframes show {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+#return{
+    margin: 2vh;
+    height: 7vh;
+    cursor: pointer;
+    animation: 0.8s slide infinite alternate ease-out;
+}
+
+
+@keyframes slide {
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(20%);
+    }
+}
+
+
+/*Data----------------------------------------------------*/
+.login-area{
+    position: absolute;
+    left: 50vw;
+    top: 50vh;
+    transform: translate(-50% , -50%);
+    
+   /*--------Style------------*/ 
+    background-color: white;
+    box-shadow: 0 0 7px gray;
+    padding: 3rem;
+    text-align: center;
+       
+    
+}
+
+
+
+.texto{
+    margin-bottom: 5%;
+    
+}
+
+.texto h1{
+    font-family: monospace;
+    font-size: 2rem;
+    line-break: strict;
+}
+
+.texto p{
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+input{
+    height: 5vh;
+    margin-bottom: 2%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    transition: 0.3s;
+}
+
+input:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #2BC4A2;
+
+}
+
+#entrar{
+    border: 1px solid #2BC4A2;
+    color: #2BC4A2;
+    background: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+#entrar:hover{
+    background: #2BC4A2;
+    color: white;
+    border: none;
+}
+
+.suporte {
+    display: flex;
+    width: 60%;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.suporte a{
+    
+    text-decoration: none;
+    
+}
+
+/*--------Media Query------------*/
+@media (max-width: 800px) {
+    .login-area{
+        width:80%;
+    }    
+}
+@media (max-width: 400px) {
+    .login-area{
+        width: 95%;
+    }    
+}

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+                                                    @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @font-face {
     font-family: "HK Grotesk Bold" ;
@@ -33,7 +33,7 @@ $exported-font:HK Grotesk Bold,'Segoe UI', Roboto, Oxygen, Ubuntu,'Open Sans', '
 }
 
 body{
-    min-height: 100vh;width: 100vw;
+    width: 100vw;
     overflow-x: hidden;
     
     background-color:$background-light ;
@@ -338,6 +338,8 @@ ul, li{
     margin:-15px 5px 0 0;
     cursor: pointer;
 }
+.nav-logo a:before{display: none;}
+
 .nav-logo img{
     height: 100%;
     filter: drop-shadow(0 0 5px white);
@@ -346,10 +348,10 @@ ul, li{
 
 @keyframes shining{
     from{
-        filter: drop-shadow(0 0 3px white)drop-shadow(0 0 20px white);
+        filter: drop-shadow(0 0 3px white);
     }
     to{
-        filter: drop-shadow(0 0 20px white)drop-shadow(0 0 20px white)drop-shadow(inset 0 0 20px white);
+        filter: drop-shadow(0 0 20px white);
     }
 }
 /*Nav-right-----------------------------------------------*/
@@ -388,7 +390,7 @@ ul, li{
 }
 
 .section-search{
-    position: absolute; top: 7vh; left: 50%;transform: translate(-50%);
+    position: absolute; top: 10vh; left: 50%;transform: translate(-50%);
     display: flex; align-items: center; justify-content: center;
     padding: 1%; 
     animation: show .3s cubic-bezier(.39,1.27,.77,1.25);
@@ -402,7 +404,7 @@ ul, li{
     }
     to{
         opacity: 1;
-        top: 7vh;
+        top: 10vh;
     }
 }
 
@@ -652,6 +654,7 @@ animation: return .3s ease-in-out;
 }
 .student-life-text p{
     padding: 2% 10%;
+    margin-bottom: 5%;
 
 }
 .student-life-text a{
@@ -757,6 +760,7 @@ footer a:hover{filter: brightness(1.5);}
 .footer-content{
     width: 100%;
     display: flex;justify-content: space-around;
+    margin-bottom: 2%;
 }
 
 /*Footer Left-------------------------------------*/
@@ -764,6 +768,20 @@ footer a:hover{filter: brightness(1.5);}
     display: block;
 }
 /*Footer Center-------------------------------------*/
+.footer-center{
+    max-width: 40%;
+    display: flex;flex-direction: column;
+    align-items: center;
+}
+
+.footer-colaboradores{
+    height: 4vh;
+    display: flex;justify-content: space-around;
+    gap: 20%;
+}
+.footer-colaboradores img{
+    height: 100%;
+}
 /*Footer right-------------------------------------*/
 .footer-right a:nth-child(1){
     color: $primary-strong;
