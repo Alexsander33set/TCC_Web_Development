@@ -142,7 +142,7 @@ a:hover::before{
 
 header{
     position: relative;
-    height: 81vh; width: 100%;
+    height: 100vh; width: 100%;
     display: flex; align-items: center;
 
     background:#121212 ;
@@ -151,7 +151,7 @@ header{
 
 main{
     margin:auto;
-    padding:5%;
+    padding:5% 5%;
 }
 
 /*-----------------------------------------Dropbox-----------------------------------------*/
@@ -316,16 +316,11 @@ ul, li{
 /*------------------------------------------------------Navbar------------------------------------------------------*/
 
 .navbar{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;top: 0;left: 0;
+    width: 100vw;height: 10vh;
+    display: flex;justify-content: center;align-items: center;
     /*background: rgba(0, 0, 0, 0.5);*/
-    backdrop-filter: blur(5px);
-    height: 10vh;
+    /*backdrop-filter: blur(5px);*/
     font-size: 0.9em ;
     z-index: 1;
 }
@@ -333,55 +328,28 @@ ul, li{
 .nav-components{
     position: relative;
     height: 100%;
-    width: 97.5%;
-    margin: auto;
-    display: flex;            
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 2%;
+    width: 96%;
+    display: flex;justify-content: space-between;align-items: center;
 
 }
-/*Nav-logo-----------------------------------------------*/
-/*
-.nav-logo{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 65px;
-    width: 65px;
-    background: white url(/assets/logo/logo3.png) center bottom no-repeat;
-    background-size: 95%;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 0 8px darkgray;
-    transition: height .7s ease-in-out;
-    z-index: 10;
-}
 
-.nav-logo:hover{
-    height: 80vh;
-    cursor: pointer;
-    pointer-events: all;
-}
-*/
 .nav-logo{
-    background-size: 100%;
-    height: 10%;width: 65px;
-    margin-right: 5px;
+    height: 100%;
+    margin:-15px 5px 0 0;
     cursor: pointer;
 }
 .nav-logo img{
-    height: 1000%;
+    height: 100%;
     filter: drop-shadow(0 0 5px white);
     animation: shining 3s alternate infinite linear;
 }
 
 @keyframes shining{
     from{
-        filter: drop-shadow(0 0 3px white);
+        filter: drop-shadow(0 0 3px white)drop-shadow(0 0 20px white);
     }
     to{
-        filter: drop-shadow(0 0 12px white);
+        filter: drop-shadow(0 0 20px white)drop-shadow(0 0 20px white)drop-shadow(inset 0 0 20px white);
     }
 }
 /*Nav-right-----------------------------------------------*/
@@ -524,12 +492,14 @@ animation: return .3s ease-in-out;
 
 .atractive-text{
     position: relative;
+    display: flex;flex-direction: column; align-items: flex-start;justify-content: center;
     background: transparent;
-    z-index: 0;
     opacity: 0;
+    z-index: 0;
+    
     animation: attractive-open 2s 1.8s ease-in-out forwards;
     height: 45vh;
-    display: flex;flex-direction: column; align-items: flex-start;justify-content: center;
+
     
 }
 
@@ -684,6 +654,19 @@ animation: return .3s ease-in-out;
     padding: 2% 10%;
 
 }
+.student-life-text a{
+    color: white;
+    background: $primary-strong;
+    padding: .5rem 1rem;
+    border-radius: .3rem;
+}
+.student-life-text a:hover{
+    color:$primary-strong;
+    background:transparent;
+    border: 1px solid $primary-strong;
+    padding: .5rem 1rem;letter-spacing: 2px;
+}
+.student-life-text a::before{display: none;}
 
 /*Advantages-------------------------------------------------------------------------------------------------*/
 .advantages{
@@ -697,8 +680,6 @@ animation: return .3s ease-in-out;
     font-size: 2rem;
     color: $primary-strong;
 }
-
-
 
 .advantages-cards{
     display: flex; justify-content: center;flex-wrap: wrap;
@@ -761,20 +742,21 @@ animation: return .3s ease-in-out;
 /*Footer-------------------------------------*/
 footer{
     width: 100%;
-    background-color: black;
-    color: #e1e1e1;
-    
+    background-color: black;  
+}
+footer h3{color: white;font-weight: 500;}
+footer p, footer a{color:#c6c6c6;}
+footer a:hover{filter: brightness(1.5);}
+.footer-components{
+    margin: 0 2.5%;
+    padding-top: 1%;
+
 }
 
-.footer-components{
-    margin: 0 2.5% 0 2.5%;
-    padding-top: 1%;
-}
 /*Footer Content-------------------------------------*/
 .footer-content{
     width: 100%;
-    display: flex;
-    justify-content: space-around;
+    display: flex;justify-content: space-around;
 }
 
 /*Footer Left-------------------------------------*/
@@ -782,18 +764,13 @@ footer{
     display: block;
 }
 /*Footer Center-------------------------------------*/
-
 /*Footer right-------------------------------------*/
-.footer-right a{
-    color: $primary-color;
-}
-.footer-right a:hover{
-    filter: brightness(1.2);
+.footer-right a:nth-child(1){
+    color: $primary-strong;
 }
 /*Footer Media-------------------------------------*/
 .footer-media{
-    display: flex;
-    justify-content: center;
+    display: flex;justify-content: center;
     width: 100%;
 }
 
@@ -846,7 +823,7 @@ footer a::before{
     color: #a6a6a6;
 }
 .end a{
-    height: 80%;
+    height: 75%;
     margin: 0 .5em;
     
 }
@@ -886,12 +863,26 @@ footer a::before{
     .atractive{
         text-align: center;
         flex-direction: column-reverse;
+        
+    }
+    .atractive a{
+        text-align: center;
+        margin: 22px auto;
     }
     .ver-line-bold{display: none};
     .ver-line-bold-mobile{display: block;}
 }
 
-
+@media (max-width:1300px)
+{
+.atractive-text h2{
+    font-size: 5.6rem;
+    line-height: 120%;
+}
+.nav-left{
+    min-width: 70%;
+}
+}
 
 /*@media (prefers-color-scheme:dark){
   *  body{

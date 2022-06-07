@@ -173,7 +173,7 @@ a:hover::before {
 /*-------------------------------------------Big-Fathers-----------------------------------------------------*/
 header {
   position: relative;
-  height: 81vh;
+  height: 100vh;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,7 +187,7 @@ header {
 
 main {
   margin: auto;
-  padding: 5%;
+  padding: 5% 5%;
 }
 
 /*-----------------------------------------Dropbox-----------------------------------------*/
@@ -376,6 +376,7 @@ ul, li {
   top: 0;
   left: 0;
   width: 100vw;
+  height: 10vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -386,9 +387,7 @@ ul, li {
       -ms-flex-align: center;
           align-items: center;
   /*background: rgba(0, 0, 0, 0.5);*/
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
-  height: 10vh;
+  /*backdrop-filter: blur(5px);*/
   font-size: 0.9em;
   z-index: 1;
 }
@@ -396,8 +395,7 @@ ul, li {
 .nav-components {
   position: relative;
   height: 100%;
-  width: 97.5%;
-  margin: auto;
+  width: 96%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -407,42 +405,16 @@ ul, li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 2%;
 }
 
-/*Nav-logo-----------------------------------------------*/
-/*
-.nav-logo{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 65px;
-    width: 65px;
-    background: white url(/assets/logo/logo3.png) center bottom no-repeat;
-    background-size: 95%;
-    border-radius: 0 0 5px 5px;
-    box-shadow: 0 0 8px darkgray;
-    transition: height .7s ease-in-out;
-    z-index: 10;
-}
-
-.nav-logo:hover{
-    height: 80vh;
-    cursor: pointer;
-    pointer-events: all;
-}
-*/
 .nav-logo {
-  background-size: 100%;
-  height: 10%;
-  width: 65px;
-  margin-right: 5px;
+  height: 100%;
+  margin: -15px 5px 0 0;
   cursor: pointer;
 }
 
 .nav-logo img {
-  height: 1000%;
+  height: 100%;
   -webkit-filter: drop-shadow(0 0 5px white);
           filter: drop-shadow(0 0 5px white);
   -webkit-animation: shining 3s alternate infinite linear;
@@ -451,23 +423,23 @@ ul, li {
 
 @-webkit-keyframes shining {
   from {
-    -webkit-filter: drop-shadow(0 0 3px white);
-            filter: drop-shadow(0 0 3px white);
+    -webkit-filter: drop-shadow(0 0 3px white) drop-shadow(0 0 20px white);
+            filter: drop-shadow(0 0 3px white) drop-shadow(0 0 20px white);
   }
   to {
-    -webkit-filter: drop-shadow(0 0 12px white);
-            filter: drop-shadow(0 0 12px white);
+    -webkit-filter: drop-shadow(0 0 20px white) drop-shadow(0 0 20px white) drop-shadow(inset 0 0 20px white);
+            filter: drop-shadow(0 0 20px white) drop-shadow(0 0 20px white) drop-shadow(inset 0 0 20px white);
   }
 }
 
 @keyframes shining {
   from {
-    -webkit-filter: drop-shadow(0 0 3px white);
-            filter: drop-shadow(0 0 3px white);
+    -webkit-filter: drop-shadow(0 0 3px white) drop-shadow(0 0 20px white);
+            filter: drop-shadow(0 0 3px white) drop-shadow(0 0 20px white);
   }
   to {
-    -webkit-filter: drop-shadow(0 0 12px white);
-            filter: drop-shadow(0 0 12px white);
+    -webkit-filter: drop-shadow(0 0 20px white) drop-shadow(0 0 20px white) drop-shadow(inset 0 0 20px white);
+            filter: drop-shadow(0 0 20px white) drop-shadow(0 0 20px white) drop-shadow(inset 0 0 20px white);
   }
 }
 
@@ -702,12 +674,6 @@ ul, li {
 
 .atractive-text {
   position: relative;
-  background: transparent;
-  z-index: 0;
-  opacity: 0;
-  -webkit-animation: attractive-open 2s 1.8s ease-in-out forwards;
-          animation: attractive-open 2s 1.8s ease-in-out forwards;
-  height: 45vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -721,6 +687,12 @@ ul, li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  background: transparent;
+  opacity: 0;
+  z-index: 0;
+  -webkit-animation: attractive-open 2s 1.8s ease-in-out forwards;
+          animation: attractive-open 2s 1.8s ease-in-out forwards;
+  height: 45vh;
 }
 
 @-webkit-keyframes attractive-open {
@@ -959,6 +931,25 @@ ul, li {
   padding: 2% 10%;
 }
 
+.student-life-text a {
+  color: white;
+  background: #008A6B;
+  padding: .5rem 1rem;
+  border-radius: .3rem;
+}
+
+.student-life-text a:hover {
+  color: #008A6B;
+  background: transparent;
+  border: 1px solid #008A6B;
+  padding: .5rem 1rem;
+  letter-spacing: 2px;
+}
+
+.student-life-text a::before {
+  display: none;
+}
+
 /*Advantages-------------------------------------------------------------------------------------------------*/
 .advantages {
   display: -webkit-box;
@@ -1059,11 +1050,24 @@ ul, li {
 footer {
   width: 100%;
   background-color: black;
-  color: #e1e1e1;
+}
+
+footer h3 {
+  color: white;
+  font-weight: 500;
+}
+
+footer p, footer a {
+  color: #c6c6c6;
+}
+
+footer a:hover {
+  -webkit-filter: brightness(1.5);
+          filter: brightness(1.5);
 }
 
 .footer-components {
-  margin: 0 2.5% 0 2.5%;
+  margin: 0 2.5%;
   padding-top: 1%;
 }
 
@@ -1084,13 +1088,8 @@ footer {
 
 /*Footer Center-------------------------------------*/
 /*Footer right-------------------------------------*/
-.footer-right a {
-  color: #2BC4A2;
-}
-
-.footer-right a:hover {
-  -webkit-filter: brightness(1.2);
-          filter: brightness(1.2);
+.footer-right a:nth-child(1) {
+  color: #008A6B;
 }
 
 /*Footer Media-------------------------------------*/
@@ -1161,7 +1160,7 @@ footer a::before {
 }
 
 .end a {
-  height: 80%;
+  height: 75%;
   margin: 0 .5em;
 }
 
@@ -1205,11 +1204,25 @@ footer a::before {
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
   }
+  .atractive a {
+    text-align: center;
+    margin: 22px auto;
+  }
   .ver-line-bold {
     display: none;
   }
   .ver-line-bold-mobile {
     display: block;
+  }
+}
+
+@media (max-width: 1300px) {
+  .atractive-text h2 {
+    font-size: 5.6rem;
+    line-height: 120%;
+  }
+  .nav-left {
+    min-width: 70%;
   }
 }
 
