@@ -26,7 +26,7 @@ body{
     margin: 2vh;
     height: 7vh;
     cursor: pointer;
-    animation: 0.8s slide infinite alternate ease-out;
+    animation: slide .8s infinite alternate ease-out;
 }
 
 
@@ -92,6 +92,12 @@ input:focus{
 }
 
 #entrar{
+    background: #2BC4A2;
+    color: white;
+    border: none;
+}
+
+#entrar:hover{
     border: 1px solid #2BC4A2;
     color: #2BC4A2;
     background: none;
@@ -99,27 +105,44 @@ input:focus{
     cursor: pointer;
 }
 
-#entrar:hover{
-    background: #2BC4A2;
-    color: white;
-    border: none;
-}
-
 .suporte {
-    display: flex;
-    width: 60%;
-    margin: auto;
-    justify-content: space-between;
+    display: flex;justify-content: space-between;
+    width: 100%;
+    
 }
-
 .suporte a{
-    
-    text-decoration: none;
-    
+    width: 50%;
 }
 
+a{text-decoration: none;}
+.sign-up{
+    display: block;
+    padding: 1.4vh;
+    margin: auto auto 2% auto;
+    width: 100%;
+    outline: none;
+    border: none;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+
+.sign-up:hover{
+    background:#2BC4A2;
+    color: white;
+    
+
+}
+
+.sign-up{
+    border: 1px solid #2BC4A2;
+    color: #2BC4A2;
+    background: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
 /*--------Media Query------------*/
-@media (max-width: 800px) {
+@media (max-width: 865px) {
     .login-area{
         width:80%;
     }    

@@ -1,174 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@font-face {
-  font-family: "HK Grotesk Bold";
-  src: url(../assets/fonts/FontsFree-Net-HKGrotesk-Bold.woff2);
-}
-
-/*font-family: 'Poppins', sans-serif;*/
-/*-------------------------------------------General-----------------------------------------------------*/
-/*---variables---*/
-/*#04081f*/
-/*#0A214D*/
-/*---end-variables---*/
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  scroll-behavior: smooth;
-}
-
-body {
-  width: 100vw;
-  overflow-x: hidden;
-  background-color: #e8e6e9;
-  font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  color: #e6e6e6;
-}
-
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: #121212;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #2BC4A2;
-  border-radius: 3px;
-}
-
-/*---------------------------Vertical-Line---------------------------*/
-.ver-line {
-  width: 1px;
-  height: 50%;
-  margin: 1em;
-  background-color: #2BC4A2;
-}
-
-/*---Default---*/
-h4 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.65rem;
-  line-height: 150%;
-  text-transform: uppercase;
-}
-
-p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.27rem;
-  line-height: 140%;
-  color: #121212;
-}
-
-.title-ss {
-  font-size: 1.5rem;
-  line-height: 28px;
-}
-
-.title-s {
-  font-size: 1.25rem;
-  line-height: 24px;
-}
-
-.title-mm {
-  font-size: 2.5rem;
-  line-height: 44px;
-}
-
-.title-m {
-  font-size: 2rem;
-  line-height: 36px;
-}
-
-.title-gg {
-  font-size: 4rem;
-  line-height: 72px;
-}
-
-.title-g {
-  font-size: 3rem;
-  line-height: 56px;
-}
-
-.par-g {
-  font-size: 1.125rem;
-  line-height: 36px;
-}
-
-.par-m {
-  font-size: 1rem;
-  line-height: 24px;
-}
-
-.par-s {
-  font-size: .875rem;
-  line-height: 22px;
-}
-
-.par-ss {
-  font-size: .75rem;
-  line-height: 18px;
-}
-
-.link {
-  position: relative;
-  text-decoration: none;
-  color: lightgray;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-.link:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  background-color: #2BC4A2;
-  width: 20%;
-  height: 2px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-.link:hover {
-  color: white;
-}
-
-.link:hover::before {
-  width: 100%;
-}
-
-/*---Default---*/
-/*-----------------------------------------------------Links-----------------------------------------------------*/
-a {
-  position: relative;
-  text-decoration: none;
-  color: white;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
-
-a:hover {
-  color: lightgray;
-}
-
-a:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  background-color: #2BC4A2;
-  width: 20%;
-  height: 2px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-a:hover::before {
-  width: 100%;
-}
-
+@import url(../default/style.css);
 /*-------------------------------------------Big-Fathers-----------------------------------------------------*/
 header {
   position: relative;
@@ -223,7 +53,7 @@ main {
   position: absolute;
   left: 0;
   bottom: -4px;
-  background-color: #2BC4A2;
+  background-color: var(--primary-color);
   width: 0%;
   height: 2px;
   -webkit-transition: all .4s;
@@ -233,11 +63,6 @@ main {
 
 .menu:hover::before {
   width: 100%;
-}
-
-ul, li {
-  list-style: none;
-  cursor: pointer;
 }
 
 .submenu {
@@ -262,7 +87,7 @@ ul, li {
 }
 
 .submenu li:hover {
-  color: #2BC4A2;
+  color: var(--primary-color);
   background-color: rgba(0, 0, 0, 0.05);
 }
 
@@ -322,7 +147,7 @@ ul, li {
   position: absolute;
   left: 0;
   bottom: -4px;
-  background-color: #2BC4A2;
+  background-color: var(--primary-color);
   width: 0%;
   height: 2px;
   -webkit-transition: all .4s;
@@ -359,7 +184,7 @@ ul, li {
 }
 
 .mobile-submenu li:hover {
-  color: #2BC4A2;
+  color: var(--primary-color);
   z-index: 5;
   background-color: rgba(0, 0, 0, 0.05);
 }
@@ -418,10 +243,10 @@ ul, li {
 
 .nav-logo img {
   height: 100%;
-  -webkit-filter: drop-shadow(0 0 5px white);
-          filter: drop-shadow(0 0 5px white);
-  -webkit-animation: shining 3s alternate infinite linear;
-          animation: shining 3s alternate infinite linear;
+  -webkit-filter: drop-shadow(0 0 15px white);
+          filter: drop-shadow(0 0 15px white);
+  -webkit-animation: shining 5s alternate infinite linear;
+          animation: shining 5s alternate infinite linear;
 }
 
 @-webkit-keyframes shining {
@@ -430,8 +255,8 @@ ul, li {
             filter: drop-shadow(0 0 3px white);
   }
   to {
-    -webkit-filter: drop-shadow(0 0 20px white);
-            filter: drop-shadow(0 0 20px white);
+    -webkit-filter: drop-shadow(0 0 30px white);
+            filter: drop-shadow(0 0 30px white);
   }
 }
 
@@ -441,8 +266,8 @@ ul, li {
             filter: drop-shadow(0 0 3px white);
   }
   to {
-    -webkit-filter: drop-shadow(0 0 20px white);
-            filter: drop-shadow(0 0 20px white);
+    -webkit-filter: drop-shadow(0 0 30px white);
+            filter: drop-shadow(0 0 30px white);
   }
 }
 
@@ -580,9 +405,9 @@ ul, li {
   font-size: 1rem;
   outline: none;
   border: none;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--input-color);
   color: white;
-  border-bottom: 1px solid #2BC4A2;
+  border-bottom: 1px solid var(--primary-color);
   -webkit-transition: all .3s;
   transition: all .3s;
 }
@@ -606,9 +431,9 @@ ul, li {
 }
 
 #send-search {
-  background: rgba(0, 0, 0, 0.6) url(/assets/Icons/icons8-search-512.svg) center center no-repeat;
+  background: var(--input-color) url(/assets/Icons/icons8-search-512.svg) center center no-repeat;
   background-size: 70%;
-  border-right: 1px solid #2BC4A2;
+  border-right: 1px solid var(--primary-color);
   margin-left: -1px;
   cursor: pointer;
 }
@@ -719,7 +544,7 @@ ul, li {
 .atractive h2 {
   font-size: 89px;
   font-weight: 600;
-  font-family: HK Grotesk Bold, "Segoe UI", Roboto, Oxygen, Ubuntu, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: var(--exported-font);
   z-index: 0;
   color: #fff;
 }
@@ -739,8 +564,8 @@ ul, li {
   cursor: pointer;
   padding: .4rem 1rem;
   text-transform: uppercase;
-  background: #2BC4A2;
-  border: 1px double #2BC4A2;
+  background: var(--primary-color);
+  border: 1px double var(--primary-color);
   margin: 5% 0;
   border-radius: .3rem;
   font-weight: 600;
@@ -789,7 +614,7 @@ ul, li {
   position: relative;
   height: 50vh;
   width: 8px;
-  background-color: #2BC4A2;
+  background-color: var(--primary-color);
   margin: 0 3vw 0 7vw;
   z-index: 1;
   -webkit-animation: header-line-in 1.8s ease-in-out forwards;
@@ -902,8 +727,8 @@ ul, li {
   width: 50%;
   height: 500px;
   background: url(/assets/images/student-life/a4.jpg) center center;
-  -webkit-box-shadow: inset 0 0 10px 10px #e8e6e9;
-          box-shadow: inset 0 0 10px 10px #e8e6e9;
+  -webkit-box-shadow: inset 0 0 10px 10px var(--background-light);
+          box-shadow: inset 0 0 10px 10px var(--background-light);
   background-size: cover;
 }
 
@@ -925,8 +750,8 @@ ul, li {
 }
 
 .student-life-text h2 {
-  font-family: HK Grotesk Bold, "Segoe UI", Roboto, Oxygen, Ubuntu, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #008A6B;
+  font-family: var(--exported-font);
+  color: var(--primary-strong);
   text-transform: uppercase;
 }
 
@@ -937,15 +762,15 @@ ul, li {
 
 .student-life-text a {
   color: white;
-  background: #008A6B;
+  background: var(--primary-strong);
   padding: .5rem 1rem;
   border-radius: .3rem;
 }
 
 .student-life-text a:hover {
-  color: #008A6B;
+  color: var(--primary-strong);
   background: transparent;
-  border: 1px solid #008A6B;
+  border: 1px solid var(--primary-strong);
   padding: .5rem 1rem;
   letter-spacing: 2px;
 }
@@ -976,7 +801,7 @@ ul, li {
 .advantages .title {
   margin-bottom: 2%;
   font-size: 2rem;
-  color: #008A6B;
+  color: var(--primary-strong);
 }
 
 .advantages-cards {
@@ -1002,7 +827,7 @@ ul, li {
 }
 
 .advantages-cards div h4 {
-  color: #008A6B;
+  color: var(--primary-strong);
 }
 
 .advantages-cards div:hover {
@@ -1018,7 +843,7 @@ ul, li {
 /*Cards-------------------------------------------------------------------------------------------------*/
 .final-main-text h4 {
   margin-top: 5rem;
-  color: #008A6B;
+  color: var(--primary-strong);
   font-weight: 400;
 }
 
@@ -1122,7 +947,7 @@ footer a:hover {
 
 /*Footer right-------------------------------------*/
 .footer-right a:nth-child(1) {
-  color: #008A6B;
+  color: var(--primary-strong);
 }
 
 /*Footer Media-------------------------------------*/
@@ -1172,7 +997,7 @@ footer a::before {
 .footer-line {
   height: 2px;
   width: 100%;
-  background-color: #2BC4A2;
+  background-color: var(--primary-color);
 }
 
 .end {
@@ -1261,7 +1086,7 @@ footer a::before {
 
 /*@media (prefers-color-scheme:dark){
   *  body{
-        background: $background-dark;
+        background: var(--background-dark);
     }
     p{
         color: #e8e6e9;

@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "HK Grotesk Bold";
+  src: url(../assets/fonts/FontsFree-Net-HKGrotesk-Bold.woff2);
+}
+
+/*font-family: 'Poppins', sans-serif;*/
+/*-------------------------------------------General-----------------------------------------------------*/
+/*---variables---*/
+:root {
+  --primary-color:#2BC4A2;
+  --primary-low:#1a9e7f;
+  --primary-strong:#008A6B;
+  --secondary-color:#00bbfa;
+  --secondary-low:#2ECAFF;
+  --secondary-strong:#0095C7;
+  --background-dark:#121212;/*#04081f*//*#0A214D*/
+  --background-light:#e8e6e9;
+  --original--color:#00ae5c;
+  --input-color:rgba(0, 0, 0, 0.6);
+  --exported-font:HK Grotesk Bold,'Segoe UI', Roboto, Oxygen, Ubuntu,'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/*---end-variables---*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  background: var(--background-light);
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  color: #e6e6e6;
+  -webkit-animation: body-show .5s;
+          animation: body-show .5s;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2BC4A2;
+  border-radius: 3px;
+}
+
+/*---------------------------Vertical-Line---------------------------*/
+.ver-line {
+  width: 1px;
+  height: 50%;
+  margin: 1em;
+  background-color: var(--primary-color);
+}
+
+/*---Default---*/
+h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.65rem;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.27rem;
+  line-height: 140%;
+  color: #242424;
+}
+
+.title-ss {
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+
+.title-s {
+  font-size: 1.25rem;
+  line-height: 24px;
+}
+
+.title-mm {
+  font-size: 2.5rem;
+  line-height: 44px;
+}
+
+.title-m {
+  font-size: 2rem;
+  line-height: 36px;
+}
+
+.title-gg {
+  font-size: 4rem;
+  line-height: 72px;
+}
+
+.title-g {
+  font-size: 3rem;
+  line-height: 56px;
+}
+
+.par-g {
+  font-size: 1.125rem;
+  line-height: 36px;
+}
+
+.par-m {
+  font-size: 1rem;
+  line-height: 24px;
+}
+
+.par-s {
+  font-size: .875rem;
+  line-height: 22px;
+}
+
+.par-ss {
+  font-size: .75rem;
+  line-height: 18px;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  color: lightgray;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.link:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--primary-color);
+  width: 20%;
+  height: 2px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+.link:hover {
+  color: white;
+}
+
+.link:hover::before {
+  width: 100%;
+}
+
+ul, li {
+  list-style: none;
+  cursor: pointer;
+}
+
+/*---Default---*/
+/*-----------------------------------------------------Links-----------------------------------------------------*/
+a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+a:hover {
+  color: lightgray;
+}
+
+a:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--primary-color);
+  width: 20%;
+  height: 2px;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+}
+
+a:hover::before {
+  width: 100%;
+}
