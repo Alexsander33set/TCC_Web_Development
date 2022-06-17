@@ -494,6 +494,22 @@ main {
   }
 }
 
+@media (max-width: 600px) {
+  .ver-line-bold-mobile {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .ver-line-bold-mobile {
+    display: none;
+  }
+  .atractive {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+}
+
 /*@media (prefers-color-scheme:dark){
   *  body{
         background: var(--background-dark);

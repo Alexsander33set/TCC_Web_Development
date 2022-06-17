@@ -161,4 +161,24 @@ header {
     }
 }
 */
+.header-text {
+  width: 50%;
+  max-width: 90%;
+  position: relative;
+}
+
+.header-text h1 {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.header-text h1.selected {
+  opacity: 1;
+}
 /*# sourceMappingURL=student-life.css.map */

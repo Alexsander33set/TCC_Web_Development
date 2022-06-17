@@ -340,7 +340,7 @@ ul, li {
   padding: 1%;
   -webkit-animation: show 0.3s cubic-bezier(0.39, 1.27, 0.77, 1.25);
           animation: show 0.3s cubic-bezier(0.39, 1.27, 0.77, 1.25);
-  z-index: 0;
+  z-index: 1;
 }
 
 @-webkit-keyframes show {
@@ -392,6 +392,7 @@ ul, li {
   outline: none;
   border: none;
   background: var(--input-color);
+  backdrop-filter: blur(5px);
   color: white;
   border-bottom: 1px solid var(--primary-color);
   -webkit-transition: all .3s;
@@ -407,7 +408,7 @@ ul, li {
 }
 
 .hide {
-  display: none !important;
+  display: none;
   -webkit-transition: all 0.3s ease-in;
   transition: all 0.3s ease-in;
 }
@@ -424,7 +425,7 @@ ul, li {
   cursor: pointer;
 }
 
-#send-search:focus {
+#send-search:focus,#send-search:hover{
   border-right: 1px solid #00bbfa;
 }
 

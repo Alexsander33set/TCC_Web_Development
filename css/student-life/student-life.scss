@@ -100,3 +100,31 @@ header{
     }
 }
 */
+
+
+
+
+.header-text {
+    width: 50%;
+    max-width: 90%;
+
+
+    position: relative;
+}
+
+.header-text h1{
+    opacity: 0;
+
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .5s;
+}
+
+.header-text h1.selected { 
+    opacity: 1;
+}
