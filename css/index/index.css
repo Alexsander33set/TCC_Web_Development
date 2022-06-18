@@ -82,7 +82,8 @@ main {
 }
 
 .atractive h2 {
-  font-size: 89px;
+  font-size: clamp(2rem, 6vw, 11rem);
+  line-height: 80%;
   font-weight: 600;
   font-family: var(--exported-font);
   z-index: 0;
@@ -483,8 +484,10 @@ main {
             flex-direction: column-reverse;
   }
   .atractive a {
-    text-align: center;
     margin: 22px auto;
+  }
+  .atractive p {
+    width: 100%;
   }
   .ver-line-bold {
     display: none;

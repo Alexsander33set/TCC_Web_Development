@@ -5,6 +5,7 @@
 main {
   margin: auto;
   padding: 5%;
+  height: 200vh;
 }
 
 /*-------------------------------------------Header-----------------------------------------------------*/
@@ -13,8 +14,10 @@ header {
   color: white;
   height: 60vh;
   width: 100%;
+  border: 1px solid #33ff00;
 }
 
+/*Header-top----------------------------------------------------------------*/
 .header-top {
   width: 100%;
   height: 90%;
@@ -51,6 +54,7 @@ header {
   transition: .5s;
   -webkit-animation: in-out 4s alternate infinite;
           animation: in-out 4s alternate infinite;
+  font-size: clamp(2rem, 5vw, 5rem);
 }
 
 @-webkit-keyframes in-out {
@@ -73,7 +77,6 @@ header {
 
 .header-text h1.selected {
   display: block;
-  opacity: 1;
 }
 
 .header-top img {
@@ -118,38 +121,60 @@ header {
   }
 }
 
-/*Header-top----------------------------------------------------------------*/
+/*Header-bottom----------------------------------------------------------------*/
 .header-bottom {
+  position: relative;
   height: 10%;
   width: 100%;
   /*background: rgba(255,255,255,0.1);*/
 }
 
-.header-bottom form {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.header-links {
-  border: 1px solid green;
-  margin: 0 5%;
+.header-areas {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 100%;
+  width: 90%;
   height: 100%;
+  margin: 0 5%;
+  /*gap:1vw;*/
 }
 
-.header-inputs {
-  display: none;
+.header-areas button {
+  height: 100%;
+  min-width: 120px;
+  padding: 0 .5vw;
+  background: #121212;
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: .8vw;
+  color: white;
+  font-weight: 600;
+  -webkit-transition: .3s;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.header-areas button:hover {
+  background: #363636;
+}
+
+.header-areas button:focus {
+  background: white;
+  color: black;
+  font-weight: 600;
+}
+
+.header-links {
+  position: absolute;
+  min-height: 30vh;
+  background: white;
+  width: 100%;
+  -webkit-box-shadow: 0 5px 5px -3px lightgray;
+          box-shadow: 0 5px 5px -3px lightgray;
 }
 
 .box {
