@@ -14,12 +14,8 @@ header {
   position: relative;
   height: 100vh;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background: #121212;
   color: white;
 }
@@ -31,30 +27,17 @@ main {
 
 /*Atractive-------------------------------------------------------------------------------------------------*/
 .atractive {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   z-index: 0;
 }
 
 .atractive-text {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   background: transparent;
   opacity: 0;
   z-index: 0;
@@ -80,7 +63,6 @@ main {
     opacity: 1;
   }
 }
-
 .atractive h2 {
   font-size: clamp(2rem, 6vw, 11rem);
   line-height: 80%;
@@ -103,18 +85,17 @@ main {
 .atractive a {
   opacity: 0;
   cursor: pointer;
-  padding: .4rem 1rem;
+  padding: 0.4rem 1rem;
   text-transform: uppercase;
   background: var(--primary-low);
   border: 1px double var(--primary-low);
   color: #121212;
   margin: 5% 0;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   font-weight: 600;
   line-height: 1.5;
-  letter-spacing: .3px;
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  letter-spacing: 0.3px;
+  transition: all 0.3s;
   -webkit-animation: attractive-open 1s 2.9s cubic-bezier(0.39, 1.27, 0.77, 1.25) forwards;
           animation: attractive-open 1s 2.9s cubic-bezier(0.39, 1.27, 0.77, 1.25) forwards;
 }
@@ -131,28 +112,23 @@ main {
 
 @-webkit-keyframes back-to-default {
   from {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
   to {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     opacity: 1;
   }
 }
 
 @keyframes back-to-default {
   from {
-    -webkit-transform: translateY(100%);
-            transform: translateY(100%);
+    transform: translateY(100%);
   }
   to {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
     opacity: 1;
   }
 }
-
 .ver-line-bold {
   position: relative;
   height: 50vh;
@@ -166,26 +142,21 @@ main {
 
 @-webkit-keyframes header-line-in {
   0% {
-    -webkit-transform: translateX(510px);
-            transform: translateX(510px);
+    transform: translateX(510px);
   }
   100% {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
 }
 
 @keyframes header-line-in {
   0% {
-    -webkit-transform: translateX(510px);
-            transform: translateX(510px);
+    transform: translateX(510px);
   }
   100% {
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
 }
-
 .ver-line-bold-mobile {
   display: none;
   position: relative;
@@ -199,14 +170,13 @@ main {
 }
 
 .ver-line-bold-mobile::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 0;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  transform: translateY(-100%);
   background-color: #121212;
   -webkit-animation: header-mobile-in-befo 1.8s ease-in-out forwards;
           animation: header-mobile-in-befo 1.8s ease-in-out forwards;
@@ -214,18 +184,15 @@ main {
 
 @-webkit-keyframes header-mobile-in {
   from {
-    -webkit-transform: translateY(-300px);
-            transform: translateY(-300px);
+    transform: translateY(-300px);
   }
 }
 
 @keyframes header-mobile-in {
   from {
-    -webkit-transform: translateY(-300px);
-            transform: translateY(-300px);
+    transform: translateY(-300px);
   }
 }
-
 @-webkit-keyframes header-mobile-in-befo {
   0% {
     height: 10px;
@@ -237,7 +204,6 @@ main {
     height: 0;
   }
 }
-
 @keyframes header-mobile-in-befo {
   0% {
     height: 10px;
@@ -249,17 +215,11 @@ main {
     height: 0;
   }
 }
-
 /*Cards-------------------------------------------------------------------------------------------------*/
 .student-life {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-around;
+  align-items: flex-start;
   text-align: center;
   min-height: 20vh;
   width: 100%;
@@ -270,18 +230,16 @@ main {
   width: 50%;
   height: 500px;
   background: url(/assets/images/student-life/a4.jpg) center center;
-  -webkit-box-shadow: inset 0 0 10px 10px var(--background-light);
-          box-shadow: inset 0 0 10px 10px var(--background-light);
+  box-shadow: inset 0 0 10px 10px var(--background-light);
   background-size: cover;
 }
 
 .student-life-img::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 100%;
   width: 50%;
-  background: -webkit-gradient(linear, left top, right top, from(#e8e6e900), color-stop(#e8e6e900), to(#ffffff));
-  background: linear-gradient(to right, #e8e6e900, #e8e6e900, #ffffff);
+  background: linear-gradient(to right, rgba(232, 230, 233, 0), rgba(232, 230, 233, 0), #ffffff);
 }
 
 .student-life-text {
@@ -306,8 +264,8 @@ main {
 .student-life-text a {
   color: white;
   background: var(--primary-strong);
-  padding: .5rem 1rem;
-  border-radius: .3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
   font-weight: 500;
 }
 
@@ -315,7 +273,7 @@ main {
   color: var(--primary-strong);
   background: transparent;
   border: 1px solid var(--primary-strong);
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   letter-spacing: 2px;
 }
 
@@ -325,19 +283,10 @@ main {
 
 /*Advantages-------------------------------------------------------------------------------------------------*/
 .advantages {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   padding: 5%;
 }
@@ -349,14 +298,9 @@ main {
 }
 
 .advantages-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
   height: 100%;
   width: 100%;
   gap: 50px;
@@ -366,8 +310,7 @@ main {
   max-width: 250px;
   text-align: center;
   cursor: pointer;
-  -webkit-transition: all .5s;
-  transition: all .5s;
+  transition: all 0.5s;
 }
 
 .advantages-cards div h4 {
@@ -376,8 +319,7 @@ main {
 
 .advantages-cards div:hover {
   border-radius: 10px 10px 0 0;
-  -webkit-transform: translateY(-3%);
-          transform: translateY(-3%);
+  transform: translateY(-3%);
 }
 
 .advantages-cards div img {
@@ -408,14 +350,12 @@ main {
   background: rgba(0, 0, 0, 0.8) url(/assets/Icons/icons8-chevron-96.png) no-repeat center;
   background-size: 70%;
   border-radius: 30%;
-  -webkit-transition: 1s;
   transition: 1s;
   cursor: pointer;
 }
 
 .top-return:hover {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  transform: rotate(360deg);
 }
 
 /*-------Ads-------*/
@@ -425,94 +365,98 @@ main {
     font-size: 5.6rem;
     line-height: 120%;
   }
+
   .nav-left {
     min-width: 90%;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
+
   .menu {
     min-height: 0;
   }
 }
-
 @media (max-width: 1000px) {
   .nav-components {
     margin: 0 3%;
   }
+
   #nav-search {
     min-width: 65vw;
   }
+
   #send-search {
     width: 4vw;
   }
+
   .nav-left ul {
     display: none;
     width: auto;
   }
+
   .nav-right ul {
     display: none;
   }
+
   .nav-logo {
     display: none;
   }
+
   .nav-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
+
   main {
     padding: 2%;
     margin: 0;
   }
+
   .student-life-img {
     display: none;
   }
+
   .student-life-text {
     width: 100%;
   }
+
   header {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
+
   .atractive {
     text-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
+
   .atractive a {
     margin: 22px auto;
   }
+
   .atractive p {
     width: 100%;
   }
+
   .ver-line-bold {
     display: none;
   }
+
   .ver-line-bold-mobile {
     display: block;
   }
 }
-
 @media (max-width: 600px) {
   .ver-line-bold-mobile {
     display: none;
   }
 }
-
 @media (max-width: 500px) {
   .ver-line-bold-mobile {
     display: none;
   }
+
   .atractive {
-    -webkit-transform: scale(0.9);
-            transform: scale(0.9);
+    transform: scale(0.9);
   }
 }
-
 /*@media (prefers-color-scheme:dark){
   *  body{
         background: var(--background-dark);
@@ -521,5 +465,4 @@ main {
         color: #e8e6e9;
     }
 }
-*/
-/*# sourceMappingURL=index.css.map */
+*//*# sourceMappingURL=index.css.map */

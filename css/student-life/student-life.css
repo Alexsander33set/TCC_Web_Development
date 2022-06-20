@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url(../default/style.css);
 @import url(../default/navbar.css);
 @import url(../default/footer.css);
@@ -11,7 +12,6 @@ main {
 /*-------------------------------------------Header-----------------------------------------------------*/
 header {
   background: #121212;
-  color: white;
   height: 60vh;
   width: 100%;
   border: 1px solid #33ff00;
@@ -21,18 +21,11 @@ header {
 .header-top {
   width: 100%;
   height: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   gap: 5%;
   padding: 0 10%;
-  background: -webkit-gradient(linear, left top, left bottom, from(#030616), to(#091241));
   background: linear-gradient(to bottom, #030616, #091241);
   -webkit-animation: city_lights 4s alternate infinite;
           animation: city_lights 4s alternate infinite;
@@ -50,11 +43,11 @@ header {
   display: none;
   width: 100%;
   height: 100%;
-  -webkit-transition: .5s;
-  transition: .5s;
+  transition: 0.5s;
   -webkit-animation: in-out 4s alternate infinite;
           animation: in-out 4s alternate infinite;
   font-size: clamp(2rem, 5vw, 5rem);
+  color: white;
 }
 
 @-webkit-keyframes in-out {
@@ -74,7 +67,6 @@ header {
     opacity: 1;
   }
 }
-
 .header-text h1.selected {
   display: block;
 }
@@ -87,40 +79,31 @@ header {
 
 @-webkit-keyframes shining {
   from {
-    -webkit-filter: none;
-            filter: none;
+    filter: none;
   }
   to {
-    -webkit-filter: drop-shadow(0 0 20px white);
-            filter: drop-shadow(0 0 20px white);
+    filter: drop-shadow(0 0 20px white);
   }
 }
 
 @keyframes shining {
   from {
-    -webkit-filter: none;
-            filter: none;
+    filter: none;
   }
   to {
-    -webkit-filter: drop-shadow(0 0 20px white);
-            filter: drop-shadow(0 0 20px white);
+    filter: drop-shadow(0 0 20px white);
   }
 }
-
 @-webkit-keyframes city_lights {
   to {
-    -webkit-filter: brightness(1.4);
-            filter: brightness(1.4);
+    filter: brightness(1.4);
   }
 }
-
 @keyframes city_lights {
   to {
-    -webkit-filter: brightness(1.4);
-            filter: brightness(1.4);
+    filter: brightness(1.4);
   }
 }
-
 /*Header-bottom----------------------------------------------------------------*/
 .header-bottom {
   position: relative;
@@ -130,12 +113,8 @@ header {
 }
 
 .header-areas {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 90%;
   height: 100%;
   margin: 0 5%;
@@ -145,16 +124,13 @@ header {
 .header-areas button {
   height: 100%;
   min-width: 120px;
-  padding: 0 .5vw;
-  background: #121212;
-  border: none;
-  outline: none;
+  padding: 0 0.5vw;
+  background: transparent;
   text-align: center;
-  font-size: .8vw;
+  font-size: 0.8vw;
   color: white;
   font-weight: 600;
-  -webkit-transition: .3s;
-  transition: .3s;
+  transition: 0.3s;
   cursor: pointer;
 }
 
@@ -166,21 +142,103 @@ header {
   background: white;
   color: black;
   font-weight: 600;
+  box-shadow: 0 0 10px -2px lightgray;
 }
 
+/*Header-Links----------------------------------------------------------------*/
 .header-links {
   position: absolute;
-  min-height: 30vh;
-  background: white;
+  top: 100%;
+  left: 0;
+  height: 0;
   width: 100%;
-  -webkit-box-shadow: 0 5px 5px -3px lightgray;
-          box-shadow: 0 5px 5px -3px lightgray;
+  background: white;
+  color: #121212;
+  box-shadow: 0 5px 5px -3px lightgray;
+  display: flex;
+  overflow: hidden;
+  padding: 0 3rem;
+  gap: 2rem;
+  transition: 0.3s;
 }
 
-.box {
-  height: 20px;
-  width: 20px;
-  background: #33ff00;
+.header-links h3 {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  color: black;
+}
+
+.header-links a {
+  position: relative;
+  display: block;
+  margin: 5px 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.9rem;
+  color: #121212;
+  transition: 0.5s;
+}
+
+.header-links a::before {
+  content: "»";
+  color: var(--primary-strong);
+  padding-right: 5px;
+  position: static;
+  background: local;
+}
+
+.header-links a:hover::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--primary-strong);
+}
+
+/*header Links onclick----------------------------------------------------------------*/
+.header-areas button:nth-child(1):focus ~ .header-links:nth-of-type(1) {
+  height: auto;
+  padding: 1% 3rem;
+  gap: 2rem;
+}
+
+.header-areas button:nth-child(2):focus ~ .header-links:nth-of-type(2) {
+  height: auto;
+  padding: 1% 3rem;
+  gap: 2rem;
+}
+
+.header-areas button:nth-child(3):focus ~ .header-links:nth-of-type(3) {
+  height: auto;
+  padding: 1% 3rem;
+  gap: 2rem;
+}
+
+.header-areas button:nth-child(4):focus ~ .header-links:nth-of-type(4) {
+  height: auto;
+  padding: 1% 3rem;
+  gap: 2rem;
+}
+
+.header-areas button:nth-child(5):focus ~ .header-links:nth-of-type(5) {
+  height: auto;
+  padding: 1% 3rem;
+  gap: 2rem;
+}
+
+.header-areas button:nth-child(6):focus ~ .header-links:nth-of-type(6) {
+  height: auto;
+  padding: 1% 3rem;
+  gap: 2rem;
+}
+
+.header-areas button:nth-child(7):focus ~ .header-links:nth-of-type(7) {
+  height: auto;
+  padding: 1% 3rem;
+  gap: 2rem;
 }
 
 /*Responsividade*/
@@ -189,26 +247,28 @@ header {
     display: none;
     width: auto;
   }
+
   .nav-right {
     justify-items: end;
     width: auto;
   }
+
   .nav-right ul {
     display: none;
   }
+
   .nav-mobile {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
+
   .ver-line-bold {
     display: none;
   }
+
   .ver-line-bold-mobile {
     display: block;
   }
 }
-
 /*
 @media (prefers-color-scheme:dark){
     body{
@@ -221,5 +281,4 @@ header {
         background:linear-gradient(to right,#e8e6e900, $dark-background);
     }
 }
-*/
-/*# sourceMappingURL=student-life.css.map */
+*//*# sourceMappingURL=student-life.css.map */
