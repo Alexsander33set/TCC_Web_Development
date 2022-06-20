@@ -40,7 +40,7 @@ header{
     height: 100%;
     transition: .5s;
     animation: in-out 4s alternate infinite;
-    font-size: clamp(2rem, 5vw, 5rem);
+    font-size: clamp(2rem, 2vw + 1rem, 5vw);
     color: white;
 }
 @keyframes in-out{
@@ -148,6 +148,35 @@ header{
 .header-areas button:nth-child(5):focus ~ .header-links:nth-of-type(5){height: auto;padding:1% 3rem;gap: 2rem;}
 .header-areas button:nth-child(6):focus ~ .header-links:nth-of-type(6){height: auto;padding:1% 3rem;gap: 2rem;}
 .header-areas button:nth-child(7):focus ~ .header-links:nth-of-type(7){height: auto;padding:1% 3rem;gap: 2rem;}
+
+main{
+    background: transparent;
+    padding: 5%;
+    border: 1px solid red;
+}
+
+main > div{
+    width: 100%;
+    height: 400px;
+    background: var(--primary-strong);
+    display: flex;align-items: center;justify-content: center;
+}
+
+.circle{
+    position: relative;
+    background: white url(../../assets/logo/shiba-logo.png) center center no-repeat;
+    background-size: 60%;
+    height: 80px;width: 80px;border-radius: 50%;
+}
+
+.bar{
+    background: white;
+    background-size: 60%;
+    height: 20px;width: 160px;
+    margin-inline: -.5%;
+}
+
+
 /*Responsividade*/
 
 @media (max-width:1000px)

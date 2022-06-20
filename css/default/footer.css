@@ -72,8 +72,11 @@ footer a:hover {
 /*Footer right-------------------------------------*/
 .footer-right a:nth-child(1) {
   color: var(--primary-strong);
+  display: inline;
 }
-
+.footer-right a{
+  display: block;
+}
 /*Footer Media-------------------------------------*/
 .footer-media {
   display: -webkit-box;
