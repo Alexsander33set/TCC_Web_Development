@@ -5,18 +5,19 @@ footer {
   overflow: hidden;
 }
 
-footer h3{
+footer h3 {
   color: white;
   font-weight: 500;
 }
 
-footer p, footer a {
+footer p,
+footer a {
   color: #c6c6c6;
 }
 
 footer a:hover {
   -webkit-filter: brightness(1.5);
-          filter: brightness(1.5);
+  filter: brightness(1.5);
 }
 
 .footer-components {
@@ -31,7 +32,7 @@ footer a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin-bottom: 2%;
 }
 
@@ -48,11 +49,11 @@ footer a:hover {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .footer-colaboradores {
@@ -61,7 +62,7 @@ footer a:hover {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   gap: 20%;
 }
 
@@ -74,17 +75,19 @@ footer a:hover {
   color: var(--primary-strong);
   display: inline;
 }
-.footer-right a{
+
+.footer-right a {
   display: block;
 }
+
 /*Footer Media-------------------------------------*/
 .footer-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -96,7 +99,7 @@ footer a:hover {
 
 .footer-media i:hover {
   -webkit-transform: scale(120%);
-          transform: scale(120%);
+  transform: scale(120%);
 }
 
 .footer-media a:nth-of-type(1):hover {
@@ -132,8 +135,8 @@ footer a::before {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   padding: 0 1%;
   height: 6vh;
   font-family: 'IBM Plex Sans', sans-serif;
@@ -151,7 +154,7 @@ footer a::before {
 
 .end a img {
   -webkit-filter: invert(100%);
-          filter: invert(100%);
+  filter: invert(100%);
   height: 100%;
   cursor: pointer;
 }
