@@ -6,7 +6,7 @@
 main {
   margin: 0 5%;
   height: 200vh;
-  border: 1px solid red;
+  background: #e6e6e6;
 }
 
 /*-------------------------------------------Header-----------------------------------------------------*/
@@ -253,7 +253,6 @@ section.student-life {
 .progress-bar {
   width: 100%;
   min-height: 400px;
-  background: red;
   display: flex;
   align-items: center;
   justify-content: center;
