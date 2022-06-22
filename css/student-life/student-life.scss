@@ -2,11 +2,26 @@
 @import url(../default/navbar.css);
 @import url(../default/footer.css);
 /*-------------------------------------------Big-Fathers-----------------------------------------------------*/
+/*--------------Variables--------------*/
+:root{
+    --bg-sl:#e6e6e6;
+    --bg-pure-white:white;
+    --sl-text-light:white;
+    --sl-text-light1:#f8f8f8;
+    --sl-text-dark:black;
+    --sl-text-dark1:#121212;
+    --sl-text-dark2:#323232;
+    --sl-par-size:1.125rem;
+    --sl-title-size:2rem;
+    --header-btn-hover:#363636;
+    --animation-pure-white:white;
 
-main{
-    margin:0 5%;
-    height: 200vh;
-    background: #e6e6e6;
+    --primary-strong2:#00614c;
+}
+/*--------------Variables--------------*/
+.student-life{
+    padding: 5%;
+    background: var(--bg-sl);
     
 }
 /*-------------------------------------------Header-----------------------------------------------------*/
@@ -17,7 +32,7 @@ header{
 /*Header-top----------------------------------------------------------------*/
 
 .header-top{
-    width: 100%;min-height: 85%;
+    width: 100%;height:49vh;
     display: flex;align-items: center;justify-content: center;
     gap: 5%;padding: 0 10%;
     background:linear-gradient( to bottom, #030616, #091241);
@@ -39,8 +54,8 @@ header{
     height: 100%;
     transition: .5s;
     animation: in-out 4s alternate infinite;
-    font-size: clamp(2rem, 3vw /*2vw + 1rem*/, 5vw);
-    color: white;
+    font-size: clamp(2rem, 2vw + 1rem, 5vw);
+    color: var(--sl-text-light);
 }
 @keyframes in-out{
     from{
@@ -63,17 +78,17 @@ header{
         filter: none;
     }
     to{
-        filter: drop-shadow(0 0 20px white);
+        filter: drop-shadow(0 0 20px var(--animation-pure-white));
     }
 }
 @keyframes city_lights{
     to{
-        filter: brightness(1.4);
+        filter: brightness(1.5);
     }
 }
 
 /*Header-bottom----------------------------------------------------------------*/
-.header-bottom{position: relative;height: 15%;min-height: 5vh; width: 100%; /*background: rgba(255,255,255,0.1);*/}
+.header-bottom{position: relative;height: 6vh; width: 100%;}
 
 .header-areas{
     display:flex;align-items: center;justify-content: center; flex-wrap: wrap;
@@ -86,15 +101,15 @@ header{
     padding: 0 .5vw;
     background: transparent;
     text-align: center; font-size:clamp(.8rem,.8vw,10vw) ;
-    color: white;font-weight: 600;
+    color: var(--sl-text-light);font-weight: 600;
     transition: .3s;
     cursor: pointer;
 }
 .header-areas button:hover{
-    background: #363636;
+    background: var(--header-btn-hover);
 }
 .header-areas button:focus{
-    background: white;
+    background: var(--bg-pure-white);
     color: black;
     font-weight: 600;
     box-shadow: 0 0 10px -2px lightgray;
@@ -150,11 +165,15 @@ header{
 .header-areas button:nth-child(7):focus ~ .header-links:nth-of-type(7){height: auto;padding:1% 3rem;gap: 2rem;}
 
 /*section-student-life----------------------------------------------------------------*/
-
-section.student-life{
-    width: 100%;
-    min-height: 50vh;
+.student-life > h2{
+    margin: auto;padding-top: 5%;
+    display: flex;justify-content: center;align-items: center;
+    text-transform: uppercase;
+    font-size: clamp(1.8rem, 2rem + 1vw, 6rem);
 }
+/*--------Student-Life--------*/
+
+/*---progress-bar*/
 
 .progress-bar{
     width: 100%;
@@ -165,15 +184,36 @@ section.student-life{
 
 .circle{
     position: relative;
-    background: green url(../../assets/logo/shiba-logo.png) center center no-repeat;
+    background: var(--bg-sl) /*url(../../assets/logo/shiba-logo.png) center center no-repeat*/;
     background-size: 60%;
     height: 80px;width: 80px;border-radius: 50%;
     box-shadow: 
-    0px 0px 0px 3px #f5f5f5,
+    0px 0px 0px 3px var(--bg-sl),
     0px 0px 0px 5px var(--primary-strong);
+    scroll-snap-align: center;
     
 }
+.circle::before{
+    content: '';
+    opacity: 0;
+    position: absolute;
+    left: 50%;top:50%;transform: translate(-50%,-50%);
+    background-color: var(--primary-strong);
+    height: 70%;width: 70%;border-radius: 50%;
+    z-index: 0;
+    transition: .3s;
 
+}
+.circle:hover::before{
+    opacity: 1;
+}
+
+.circle a{
+    display: block;
+    height: 100%;width: 100%;border-radius: 50%;
+    opacity: 0;
+    cursor: pointer;
+}
 .bar{
     background: white;
     background-size: 60%;
@@ -181,6 +221,55 @@ section.student-life{
     margin-inline: -.5%;
 }
 
+/*---Cards---*/
+.sl-card{
+    position: absolute;left: 0;top: 0;
+    display: flex;align-items: center;justify-content: space-around;
+    padding:2%;margin:4%;border-radius: 15px;
+    opacity:0;pointer-events: none;scroll-margin: 350px;
+    background:linear-gradient(to bottom,var(--primary-strong),var(--primary-strong2));
+}
+
+/*---Cards-text---*/
+.text{
+    padding: 2%;
+    font-size: 20px;
+    color: var(--sl-text-light1);
+}
+
+.text h3{
+    font-size: var(--sl-title-size);
+}
+.text a{
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    display: block;
+    height: 50px;width: 50px;
+    pointer-events: all;
+}
+.text a::before{
+    display: none;
+}
+.text li{
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+/*---Cards-Img---*/
+.sl-card img{
+    height: 70%;
+}
+/*---Cards-selecionados---*/
+.sl-card:target{
+    position: relative;
+    animation: show-card .7s forwards;
+}
+
+@keyframes show-card{
+    to{
+        opacity: 1;
+    }
+}
 
 /*Responsividade*/
 

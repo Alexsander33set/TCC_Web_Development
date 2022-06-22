@@ -121,7 +121,8 @@ header img {
 }
 
 .error p {
-  height: 0;
+  line-height: 0;
+  font-size: 1.257rem;
   opacity: 0;
   transition: 0.4s;
 }
@@ -139,28 +140,15 @@ header img {
   color: #323232;
   background: transparent;
   cursor: pointer;
-  transition: 0.4s;
+  transition: 1s;
 }
 
 .error:focus > p {
+  line-height: 1.6rem;
   opacity: 1;
-  margin-top: 5%;
-  cursor: pointer;
-  -webkit-animation: solution 1s forwards;
-          animation: solution 1s forwards;
+  margin-top: 1%;
 }
 
-@-webkit-keyframes solution {
-  to {
-    height: 20px;
-  }
-}
-
-@keyframes solution {
-  to {
-    height: 20px;
-  }
-}
 .decoration-help {
   float: right;
   width: 50%;
