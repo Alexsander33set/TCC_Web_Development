@@ -170,7 +170,7 @@ a:hover {
   color: var(--primary-strong);
 }
 
-a:before {
+.navbar a:before, .final-main-text a:before {
   content: '';
   position: absolute;
   left: 0;

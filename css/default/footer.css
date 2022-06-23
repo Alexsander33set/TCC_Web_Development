@@ -33,7 +33,8 @@ footer a:hover {
   display: flex;
   -ms-flex-pack: distribute;
   justify-content: space-around;
-  margin-bottom: 2%;
+  margin: 2%;
+  flex-wrap: wrap;
 }
 
 /*Footer Left-------------------------------------*/
