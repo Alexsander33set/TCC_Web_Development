@@ -16,7 +16,6 @@ footer a {
 }
 
 footer a:hover {
-  -webkit-filter: brightness(1.5);
   filter: brightness(1.5);
 }
 
@@ -28,13 +27,16 @@ footer a:hover {
 /*Footer Content-------------------------------------*/
 .footer-content {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  margin: 2%;
+  justify-content: flex-start;
+  align-items: center;
   flex-wrap: wrap;
+  gap: 2%;
+  margin: 2% 0;
+}
+
+.footer-left, .footer-center, .footer-right {
+  width: clamp(350px, 33vw, 100vw);
 }
 
 /*Footer Left-------------------------------------*/
@@ -44,27 +46,13 @@ footer a:hover {
 
 /*Footer Center-------------------------------------*/
 .footer-center {
-  max-width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 .footer-colaboradores {
   height: 4vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  gap: 20%;
+  display: inline-block;
 }
 
 .footer-colaboradores img {
@@ -83,23 +71,17 @@ footer a:hover {
 
 /*Footer Media-------------------------------------*/
 .footer-media {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
 }
 
 .footer-media i {
   height: 4vh;
-  -webkit-transition: all .15s, color;
-  transition: all .15s, color;
+  transition: all 0.15s, color;
 }
 
 .footer-media i:hover {
-  -webkit-transform: scale(120%);
   transform: scale(120%);
 }
 
@@ -132,15 +114,11 @@ footer a::before {
 }
 
 .end {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0 1%;
   height: 6vh;
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: "IBM Plex Sans", sans-serif;
   font-weight: 600;
 }
 
@@ -150,12 +128,11 @@ footer a::before {
 
 .end a {
   height: 75%;
-  margin: 0 .5em;
+  margin: 0 0.5em;
 }
 
 .end a img {
-  -webkit-filter: invert(100%);
   filter: invert(100%);
   height: 100%;
   cursor: pointer;
-}
+}/*# sourceMappingURL=footer.css.map */

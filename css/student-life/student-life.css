@@ -21,6 +21,20 @@
 }
 
 /*--------------Variables--------------*/
+/*--------------Mouse--------------*/
+.mouse {
+  position: absolute;
+  transform: translateX(-50%, -50%);
+  height: 1px;
+  width: 1px;
+  border-radius: 50%;
+  top: -101%;
+  left: -101%;
+  box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+
+/*--------------End-Mouse--------------*/
 .student-life {
   padding: 5%;
   background: var(--bg-sl);
@@ -28,25 +42,29 @@
 
 /*-------------------------------------------Header-----------------------------------------------------*/
 header {
-  background: var(--background-dark);
-  height: 55vh;
-  width: 100%;
-}
-
-/*Header-top----------------------------------------------------------------*/
-.header-top {
-  width: 100%;
-  height: 49vh;
+  background: var(--background-dark) linear-gradient(to bottom, #030616, #091241);
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 49vh;
+  width: 100%;
   gap: 5%;
   padding: 0 10%;
-  background: linear-gradient(to bottom, #030616, #091241);
   -webkit-animation: city_lights 4s alternate infinite;
           animation: city_lights 4s alternate infinite;
 }
 
+@-webkit-keyframes city_lights {
+  to {
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes city_lights {
+  to {
+    filter: brightness(1.5);
+  }
+}
 .header-text {
   text-transform: uppercase;
   font-size: 2vw;
@@ -60,10 +78,10 @@ header {
   width: 100%;
   height: 100%;
   transition: 0.5s;
-  -webkit-animation: in-out 4s alternate infinite;
-          animation: in-out 4s alternate infinite;
   font-size: clamp(2rem, 2vw + 1rem, 5vw);
   color: var(--sl-text-light);
+  -webkit-animation: in-out 4s alternate infinite;
+          animation: in-out 4s alternate infinite;
 }
 
 @-webkit-keyframes in-out {
@@ -87,7 +105,7 @@ header {
   display: block;
 }
 
-.header-top img {
+header img {
   width: 23%;
   -webkit-animation: shining 4s alternate infinite;
           animation: shining 4s alternate infinite;
@@ -110,32 +128,19 @@ header {
     filter: drop-shadow(0 0 20px var(--animation-pure-white));
   }
 }
-@-webkit-keyframes city_lights {
-  to {
-    filter: brightness(1.5);
-  }
-}
-@keyframes city_lights {
-  to {
-    filter: brightness(1.5);
-  }
-}
+/*End-Header-------------------------------------------------------------------*/
 /*Header-bottom----------------------------------------------------------------*/
-.header-bottom {
+.header-areas {
   position: relative;
   height: 6vh;
   width: 100%;
-}
-
-.header-areas {
+  padding: 0 5%;
+  /*gap:1vw;*/
+  background: var(--background-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  width: 90%;
-  height: 100%;
-  margin: 0 5%;
-  /*gap:1vw;*/
 }
 
 .header-areas button {
@@ -274,59 +279,96 @@ header {
 /*---progress-bar*/
 .progress-bar {
   width: 100%;
-  min-height: 400px;
+  margin: 2%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/*inputs*/
+#beg, #int, #pro {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/*end-inputs*/
 .circle {
   position: relative;
-  background: var(--bg-sl);
-  background-size: 60%;
-  height: 80px;
-  width: 80px;
+  height: 6vw;
+  width: 6vw;
   border-radius: 50%;
+  background: var(--bg-sl);
   box-shadow: 0px 0px 0px 3px var(--bg-sl), 0px 0px 0px 5px var(--primary-strong);
-  scroll-snap-align: center;
 }
 
 .circle::before {
   content: "";
-  /*opacity: 0;*/
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  background-color: var(--primary-strong);
+  background: white;
+  box-shadow: 0 0 0 2px var(--primary-strong);
   height: 70%;
   width: 70%;
   border-radius: 50%;
-  z-index: 0;
   transition: 0.3s;
 }
 
-.circle a:hover {
-  opacity: 0;
+.circle::after {
+  content: "Intermitente";
+  position: absolute;
+  top: 120%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.225rem;
+  font-family: "poppins";
 }
 
-.circle a {
-  display: block;
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  cursor: pointer;
-  background: var(--bg-sl);
+.nv1-circle::after {
+  content: "Iniciante";
+}
+
+.nv2-circle::after {
+  content: "Junior";
+}
+
+.nv3-circle::after {
+  content: "Senior";
 }
 
 .bar {
   background: white;
   background-size: 60%;
   height: 20px;
-  width: 160px;
+  width: 20vw;
   margin-inline: -0.5%;
 }
 
+/*circle-mark*/
+#beg:checked ~ .nv1-circle::before {
+  background-color: var(--primary-strong);
+}
+
+#int:checked ~ .nv2-circle::before {
+  background-color: var(--primary-strong);
+}
+
+#pro:checked ~ .nv3-circle::before {
+  background-color: var(--primary-strong);
+}
+
+/**/
+#int:checked ~ .n1-bar {
+  background: var(--primary-strong);
+}
+
+#pro:checked ~ .n2-bar, #pro:checked ~ .n1-bar {
+  background: var(--primary-strong);
+}
+
+/**/
 /*---Cards---*/
 .sl-card {
   position: absolute;
@@ -357,16 +399,14 @@ header {
 
 .text a {
   position: absolute;
-  right: 20px;
-  top: 40px;
-  display: block;
-  height: 50px;
-  width: 50px;
-  pointer-events: all;
+  right: 2vw;
+  top: 2vh;
+  height: auto;
+  width: auto;
 }
 
-.text a::before {
-  display: none;
+.text a img {
+  width: 3vw;
 }
 
 .text li {
@@ -397,11 +437,6 @@ header {
     opacity: 1;
   }
 }
-.beginner:target ~ #beginner {
-  opacity: 1;
-  background: red;
-}
-
 /*Responsividade*/
 @media (max-width: 1000px) {
   .nav-left ul {

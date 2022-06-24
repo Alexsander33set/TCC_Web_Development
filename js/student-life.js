@@ -61,3 +61,44 @@ function start() {
 }
 
 window.addEventListener("load", start)
+
+/*-----Mouse-light-----*/
+
+document.addEventListener('mousemove', (position) =>
+{
+const mouse = document.querySelector('.mouse')
+ mouse.style.left = position.pageX + 'px';
+ mouse.style.top = position.pageY + 'px';
+})
+
+/*------------------------------------------------------------------------------------------------------------------------*/ 
+
+/*Card-Selector*/
+const beg = document.querySelector('#beg')
+const int = document.querySelector('#int')
+const pro = document.querySelector('#pro')
+
+
+function beginner() 
+{ 
+    window.location.href = "http://127.0.0.1:5501/html/student-life.html#beginner"; 
+    beg.checked="checked"
+}
+function intermediate() 
+{ 
+    window.location.href = "http://127.0.0.1:5501/html/student-life.html#intermediate"; 
+    int.checked="checked"
+}
+function profissional() 
+{ 
+    window.location.href = "http://127.0.0.1:5501/html/student-life.html#profissional"; 
+    pro.checked="checked"
+}
+
+
+
+
+
+/*End-Card-Selector*/
+
+/*------------------------------------------------------------------------------------------------------------------------*/ 
