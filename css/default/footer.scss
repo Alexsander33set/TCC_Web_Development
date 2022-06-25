@@ -33,11 +33,12 @@ footer {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2%;margin: 2% 0;
+    margin: 2% 0;
   }
   
   .footer-left, .footer-center, .footer-right{
-    width: clamp(350px, 25vw, 100vw);
+    width: clamp(300px, 25vw, 100vw);
+    margin: 2%;
   }
   /*Footer Left-------------------------------------*/
   /*Footer Center-------------------------------------*/
