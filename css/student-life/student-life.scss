@@ -29,6 +29,7 @@
     box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.2);
     pointer-events: none;
 }
+
 /*--------------End-Mouse--------------*/
 .student-life{
     padding: 5%;
@@ -94,7 +95,7 @@ header img{
 /*Header-bottom----------------------------------------------------------------*/
 .header-areas{
     position: relative;
-    height: 6vh; width: 100%;
+     width: 100%;
     padding: 0 5%;/*gap:1vw;*/
     background: var(--background-dark);
     display:flex;align-items: center;justify-content: center; flex-wrap: wrap;
@@ -102,7 +103,7 @@ header img{
 }
 
 .header-areas button{
-    height: 100%;min-width: 130px;
+    height: 6vh;min-width: 130px;
     padding: 0 .5vw;
     background: transparent;
     text-align: center; font-size:clamp(.8rem,.8vw,10vw) ;
@@ -195,7 +196,7 @@ header img{
 .circle{
     position: relative;
     height: 6vw;width: 6vw;border-radius: 50%;
-    background: var(--bg-sl);
+    background: var(--bg-sl); cursor: pointer;
     box-shadow: 
     0px 0px 0px 3px var(--bg-sl),
     0px 0px 0px 5px var(--primary-strong);
@@ -279,10 +280,12 @@ header img{
     right: 2vw;
     top: 2vh;
     height: auto;width: auto;
+    cursor: pointer;
+    pointer-events: all;
+    font-size: 1.5vw;
+    color: #121212;
 }
-.text a img{
-    width: 3vw;
-}
+
 .text li{
     list-style-type: disc;
     padding-left: 2rem;
@@ -304,38 +307,7 @@ header img{
 }
 /*Responsividade*/
 
-@media (max-width:1000px)
-{
-    .nav-left ul{
-        display: none;
-        width: auto;
-    }
 
-    .nav-right{
-        justify-items: end;
-        width: auto;
-    }
-    .nav-right ul{
-        display: none;
-    }
-
-    .nav-mobile{
-        display: flex;
-    }
-
-    .ver-line-bold{display: none};
-    .ver-line-bold-mobile{display: block;}
+@media (max-width:800px){
+    .mouse{display: none;}
 }
-/*
-@media (prefers-color-scheme:dark){
-    body{
-        background: $dark-background;
-    }
-    p{
-        color: #e8e6e9;
-    }
-    .student-life-img::before{
-        background:linear-gradient(to right,#e8e6e900, $dark-background);
-    }
-}
-*/

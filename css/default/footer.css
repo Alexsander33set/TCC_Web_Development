@@ -13,6 +13,7 @@ footer h3 {
 footer p,
 footer a {
   color: #c6c6c6;
+  display: block;
 }
 
 footer a:hover {
@@ -28,7 +29,7 @@ footer a:hover {
 .footer-content {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 2%;
@@ -36,14 +37,10 @@ footer a:hover {
 }
 
 .footer-left, .footer-center, .footer-right {
-  width: clamp(350px, 33vw, 100vw);
+  width: clamp(350px, 25vw, 100vw);
 }
 
 /*Footer Left-------------------------------------*/
-.footer-left a {
-  display: block;
-}
-
 /*Footer Center-------------------------------------*/
 .footer-center {
   display: flex;
@@ -63,10 +60,6 @@ footer a:hover {
 .footer-right a:nth-child(1) {
   color: var(--primary-strong);
   display: inline;
-}
-
-.footer-right a {
-  display: block;
 }
 
 /*Footer Media-------------------------------------*/

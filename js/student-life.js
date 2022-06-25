@@ -2,7 +2,7 @@
 const btn_mobile = document.querySelector('#nav_mobile_menu')
 const mobile_menu = document.querySelector('.hide')
 const btn_menu = document.querySelector('.fi-rr-menu-burger')
-const btn_exit = document.querySelector('.fi-br-cross')
+const btn_exit = document.querySelector('.fi-rr-cross')
 
 const search_button = document.querySelector('.fi-rr-search')
 const search_window = document.querySelector('.section-search')

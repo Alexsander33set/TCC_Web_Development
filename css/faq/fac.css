@@ -1,6 +1,11 @@
 @import url(../default/style.css);
 @import url(../default/navbar.css);
 @import url(../default/footer.css);
+/*------variables------*/
+:root {
+  --border-color:#c7c7c7;
+}
+
 /*-------------------------------------------Big-Fathers-----------------------------------------------------*/
 body {
   background-color: var(--background-light);
@@ -102,17 +107,49 @@ header img {
   }
 }
 /*----------After Header----------*/
-.title-faq {
+main > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+}
+
+span h2 {
   font-size: 2.5rem;
   letter-spacing: 1px;
   text-align: center;
-  margin: 100px auto;
+  font-weight: 500;
+}
+
+span img {
+  height: 30%;
+  margin-left: 20px;
 }
 
 .communs-errors {
-  float: left;
-  width: 50%;
+  margin: auto;
+  width: 90%;
   padding: 1% 5%;
+}
+
+.error {
+  position: relative;
+  width: 100%;
+  padding: 20px 0 20px 30px;
+  border: 1px solid var(--border-color);
+  border-left: none;
+  border-right: none;
+  color: #323232;
+  text-align: start;
+  background: transparent;
+  transition: 1s;
+  cursor: pointer;
+}
+
+.error:focus > p {
+  line-height: 1.6rem;
+  opacity: 1;
+  margin-top: 1%;
 }
 
 .error h2 {
@@ -125,32 +162,4 @@ header img {
   font-size: 1.257rem;
   opacity: 0;
   transition: 0.4s;
-}
-
-.error {
-  font-family: "poppins", sans-serif;
-  text-align: start;
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  border-top: 1px solid #c7c7c7;
-  border-bottom: 1px solid #c7c7c7;
-  padding: 20px 0 20px 30px;
-  color: #323232;
-  background: transparent;
-  cursor: pointer;
-  transition: 1s;
-}
-
-.error:focus > p {
-  line-height: 1.6rem;
-  opacity: 1;
-  margin-top: 1%;
-}
-
-.decoration-help {
-  float: right;
-  width: 50%;
-  padding: 0 14%;
 }/*# sourceMappingURL=fac.css.map */
