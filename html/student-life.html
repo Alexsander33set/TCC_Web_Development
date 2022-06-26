@@ -102,14 +102,14 @@
    </header>
 
    <div class="header-areas">
-      <button>Artes e Design</button>
-      <button>Ciências Exatas e Informática</button>
-      <button>Ciências Biológicas e da Terra</button>
-      <button>Ciências Sociais e Humanas</button>
-      <button>Comunicação e Informação</button>
-      <button>Saúde e Bem-Estar</button>
+      <button><a href="#sl-1">Artes e Design</a></button>
+      <button><a href="#sl-2">Ciências Exatas e Informática</a></button>
+      <button><a href="#sl-3">Ciências Biológicas e da Terra</a></button>
+      <button><a href="#sl-4">Ciências Sociais e Humanas</a></button>
+      <button><a href="#sl-5">Comunicação e Informação</a></button>
+      <button><a href="#sl-6">Saúde e Bem-Estar</a></button>
 <!--------Links-of-areas-------->
-      <div class="header-links">
+      <div class="header-links" id="sl-1">
          <div>
             <h3>Artes Visuais</h3>
             <a href="">Avaliação</a>
@@ -183,13 +183,13 @@
 
          </div>
       </div>
-      <div class="header-links">
+      <div class="header-links"id="sl-2">
          <div>
             <h3>Desenvolvedor <p>Front-End</p>
             </h3>
             <a href="">Plataformas</a>
             <a href="">Dispositivos Móveis</a>
-            <a href="">Websites</a>
+            <a href="#sl-dev-web">Websites</a>
             <a href="">Softwares</a>
          </div>
          <div>
@@ -225,7 +225,7 @@
             <a href="">Matemática Computacional</a>
          </div>
       </div>
-      <div class="header-links">
+      <div class="header-links"id="sl-3">
          <div>
             <h3>Agroecologia</h3>
             <a href="">Administração</a>
@@ -270,7 +270,7 @@
             <a href="">Saúde Pública Veterinária</a>
          </div>
       </div>
-      <div class="header-links">
+      <div class="header-links"id="sl-4">
          <div>
             <h3>Relações Internacionais</h3>
             <a href="">Analista Internacional</a>
@@ -308,7 +308,7 @@
             <a href="">Orientação</a>
          </div>
       </div>
-      <div class="header-links">
+      <div class="header-links"id="sl-5">
          <div>
             <h3>Cinema e Audiovisual</h3>
             <a href="">Captação de Som</a>
@@ -345,7 +345,7 @@
             <a href="">Gestão de Conteúdo</a>
          </div>
       </div>
-      <div class="header-links">
+      <div class="header-links"id="sl-6">
          <div>
             <h3>Biomedicina</h3>
             <a href="">Acupuntura</a>
@@ -400,7 +400,52 @@
       </div>
    </div>
 
-   <section class="student-life">
+   <section class="student-life" id="#sl-default">
+      <h2> Nos campos acima selecione a área desejada</h2>
+      <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
+
+      <!-- <div class="sl-card" id="beginner">
+         <img src="../assets/logo/shiba-logo.png" alt="">
+         <div class="text">
+            <h3>Iniciante</h3>
+            <p>
+               <li>Lógica da programação</li>
+               <li>HTML/CSS</li>
+               <li>Introdução ao Python</li>
+               <li>Inglês </li>
+
+            </p>
+            <a href="#"><i class="fi fi-rr-cross"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="intermediate">
+         <img src="../assets/logo/shiba 2.png" alt="">
+         <div class="text">
+            <h3>Desenvolvedor Junior</h3>
+            <p>
+               <li>Foque em aprender uma linguagem e o dominio</li>
+               <li>Banco de dados - PHP / MySQL</li>
+               <li>Bibliotecas</li>
+               <li>Inglês </li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross"></i></a>
+         </div>
+      </div>
+      <div class="sl-card" id="profissional">
+         <img src="../assets/logo/shiba 3.png" alt="">
+         <div class="text">
+            <h3>Programador Senior</h3>
+            <p>
+               <li>especialização em uma linguagem</li>
+               <li>Linguagens diversas</li>
+               <li>Networking</li>
+               <li>Ajuda a comunidade</li>
+            </p>
+            <a href="#"><i class="fi fi-rr-cross" style="cursor:pointer ;"></i></a>
+         </div>
+      </div> -->
+   </section>
+   <section class="student-life" id="sl-dev-web">
       <h2> Desenvolvedor Web</h2>
       <p style="margin:auto; text-align:center;">Em qual nível você está?</p>
       <div class="progress-bar">
@@ -415,13 +460,6 @@
             <div class="bar n2-bar"></div>
             <button class="circle nv3-circle" onclick="profissional()"></button>
          </div>
-         
-         
-         <style>
-
-
-
-         </style>
       </div>
 
       <div class="sl-card" id="beginner">

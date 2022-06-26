@@ -34,8 +34,9 @@
 .student-life{
     padding: 5%;
     background: var(--bg-sl);
-    
 }
+#sl-dev-web{display: none;}
+#sl-dev-web:target{display: block;}
 /*-------------------------------------------Header-----------------------------------------------------*/
 header{
     background: var(--background-dark) linear-gradient( to bottom, #030616, #091241);
@@ -99,33 +100,40 @@ header img{
     padding: 0 5%;/*gap:1vw;*/
     background: var(--background-dark);
     display:flex;align-items: center;justify-content: center; flex-wrap: wrap;
-    
+    scroll-margin: 350px;    
 }
 
 .header-areas button{
     height: 6vh;min-width: 130px;
     padding: 0 .5vw;
-    background: transparent;
-    text-align: center; font-size:clamp(.8rem,.8vw,10vw) ;
-    color: var(--sl-text-light);font-weight: 600;
+    background: transparent; 
     transition: .3s;
     cursor: pointer;
 }
-.header-areas button:hover{
+.header-areas button a{
+    height:100%;width:100%;
+    font-size:clamp(.8rem,.8vw,10vw);
+    font-weight: 600;
+    text-align: center;
+    color: var(--sl-text-light);
+    display: block;
+    line-height: 6vh;
+}
+.header-areas button a:hover{
     background: var(--header-btn-hover);
 }
-.header-areas button:focus{
+.header-areas button a:focus{
     background: var(--bg-pure-white);
-    color: black;
-    font-weight: 600;
     box-shadow: 0 0 10px -2px lightgray;
+    color: var(--sl-text-dark);
 }
 
+/*header Links onclick----------------------------------------------------------------*/
+.header-links:target{height: auto;padding:1% 3rem;gap: 2rem;}
 /*Header-Links----------------------------------------------------------------*/
 .header-links{
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 100%;left: 0;
     height: 0;width: 100%;
     background: white;
     color: #121212;
@@ -134,8 +142,9 @@ header img{
     padding:0 3rem;gap: 2rem;
     transition: .3s;
     z-index: 5;
+    scroll-margin: 300px;
 }
-.header-links h3:foc{
+.header-links h3{
     font-size: 1.25rem;
     letter-spacing: 1px;
     color: black;
@@ -146,6 +155,10 @@ header img{
     margin: 5px 0;width: fit-content;
     font-size: .9rem;color: #121212;
     transition: .5s;
+}
+
+.header-links a:active{
+    color: red;
 }
 .header-links a::before{
     content: '»';
@@ -162,14 +175,13 @@ header img{
     background: var(--primary-strong);
 }
 /*header Links onclick----------------------------------------------------------------*/
-.header-areas button:nth-child(1):focus ~ .header-links:nth-of-type(1){height: auto;padding:1% 3rem;gap: 2rem;}
-.header-areas button:nth-child(2):focus ~ .header-links:nth-of-type(2){height: auto;padding:1% 3rem;gap: 2rem;}
-.header-areas button:nth-child(3):focus ~ .header-links:nth-of-type(3){height: auto;padding:1% 3rem;gap: 2rem;}
-.header-areas button:nth-child(4):focus ~ .header-links:nth-of-type(4){height: auto;padding:1% 3rem;gap: 2rem;}
-.header-areas button:nth-child(5):focus ~ .header-links:nth-of-type(5){height: auto;padding:1% 3rem;gap: 2rem;}
-.header-areas button:nth-child(6):focus ~ .header-links:nth-of-type(6){height: auto;padding:1% 3rem;gap: 2rem;}
-.header-areas button:nth-child(7):focus ~ .header-links:nth-of-type(7){height: auto;padding:1% 3rem;gap: 2rem;}
-
+// .header-areas button:nth-child(1):focus ~ .header-links:nth-of-type(1){height: auto;padding:1% 3rem;gap: 2rem;}
+// .header-areas button:nth-child(2):focus ~ .header-links:nth-of-type(2){height: auto;padding:1% 3rem;gap: 2rem;}
+// .header-areas button:nth-child(3):focus ~ .header-links:nth-of-type(3){height: auto;padding:1% 3rem;gap: 2rem;}
+// .header-areas button:nth-child(4):focus ~ .header-links:nth-of-type(4){height: auto;padding:1% 3rem;gap: 2rem;}
+// .header-areas button:nth-child(5):focus ~ .header-links:nth-of-type(5){height: auto;padding:1% 3rem;gap: 2rem;}
+// .header-areas button:nth-child(6):focus ~ .header-links:nth-of-type(6){height: auto;padding:1% 3rem;gap: 2rem;}
+// .header-areas button:nth-child(7):focus ~ .header-links:nth-of-type(7){height: auto;padding:1% 3rem;gap: 2rem;}
 /*section-student-life----------------------------------------------------------------*/
 .student-life > h2{
     margin: auto;padding-top: 5%;
