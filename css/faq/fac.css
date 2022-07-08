@@ -128,7 +128,7 @@ span img {
 
 .communs-errors {
   margin: auto;
-  width: 90%;
+  width: 85%;
   padding: 1% 5%;
 }
 
@@ -162,4 +162,17 @@ span img {
   font-size: 1.257rem;
   opacity: 0;
   transition: 0.4s;
+}
+
+.error i {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  transition: 0.3s;
+}
+
+.error:focus i {
+  transform: translateY(-50%) rotate(90deg);
 }/*# sourceMappingURL=fac.css.map */

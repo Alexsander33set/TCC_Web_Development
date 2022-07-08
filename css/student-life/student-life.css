@@ -35,17 +35,8 @@
 }
 
 /*--------------End-Mouse--------------*/
-.student-life {
-  padding: 5%;
-  background: var(--bg-sl);
-}
-
-#sl-dev-web {
+.hide {
   display: none;
-}
-
-#sl-dev-web:target {
-  display: block;
 }
 
 /*-------------------------------------------Header-----------------------------------------------------*/
@@ -55,7 +46,7 @@ header {
   align-items: center;
   justify-content: center;
   height: 49vh;
-  width: 100%;
+  width: 100vw;
   gap: 5%;
   padding: 0 10%;
   -webkit-animation: city_lights 4s alternate infinite;
@@ -225,6 +216,14 @@ header img {
   transition: 0.5s;
 }
 
+.header-links .fi-rr-cross-small {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
 .header-links a:active {
   color: red;
 }
@@ -249,6 +248,46 @@ header img {
 
 /*header Links onclick----------------------------------------------------------------*/
 /*section-student-life----------------------------------------------------------------*/
+.student-life {
+  padding: 5%;
+  background: var(--bg-sl);
+}
+
+.student-life h3 {
+  text-align: center;
+}
+
+.student-life p {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.fi-rr-caret-up {
+  position: absolute;
+  right: -20px;
+  -webkit-animation: up-variant 0.5s 6 alternate ease-in-out forwards;
+          animation: up-variant 0.5s 6 alternate ease-in-out forwards;
+}
+
+@-webkit-keyframes up-variant {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes up-variant {
+  from {
+    transform: translateY(8px);
+  }
+  to {
+    transform: translateY(-2px);
+  }
+}
 .student-life > h2 {
   margin: auto;
   padding-top: 5%;
@@ -313,14 +352,20 @@ header img {
 
 .nv1-circle::after {
   content: "Iniciante";
+  position: absolute;
+  top: 130%;
 }
 
 .nv2-circle::after {
-  content: "Junior";
+  content: "Intermediário";
+  position: absolute;
+  top: 130%;
 }
 
 .nv3-circle::after {
-  content: "Senior";
+  content: "Avançado";
+  position: absolute;
+  top: 130%;
 }
 
 .bar {
@@ -349,7 +394,7 @@ header img {
   background: var(--primary-strong);
 }
 
-#pro:checked ~ .n2-bar, #pro:checked ~ .n1-bar {
+#pro:checked ~ :is(.n2-bar, .n1-bar) {
   background: var(--primary-strong);
 }
 
@@ -369,6 +414,10 @@ header img {
   pointer-events: none;
   scroll-margin: 350px;
   background: linear-gradient(to bottom, var(--primary-strong), var(--primary-strong2));
+}
+
+.sl-card i {
+  font-size: 4vw;
 }
 
 /*---Cards-text---*/

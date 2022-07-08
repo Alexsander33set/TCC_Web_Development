@@ -10,15 +10,21 @@
    <!-------Logo title------->
    <link rel="icon" href="../assets/logo/inverted-logo.png" type="image/icon type">
    <!-------CSS Icons------->
-   <link href="/assets/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+   <link href="../assets/uicons-regular-rounded/css/uicons-regular-rounded.css" rel="stylesheet">
+   <link href="../assets/uicons-brands/css/uicons-brands.css" rel="stylesheet">
+
+
 </head>
 
 <body>
+   <div class="loader"></div>
+   <script src="../js/preloader.js"></script>
    <!-------Top-Return------->
    <span id="top-return" style="position:absolute;"></span>
    <!-------/<div class="ver-line"></div>/------->
+   <!-------Navbar------->
    <div class="navbar">
-      <!-------Navbar------->
+
       <div class="nav-components">
          <div class="nav-mobile">
             <button id="nav_mobile_menu">
@@ -26,53 +32,29 @@
                <i class="fi fi-rr-cross"></i>
             </button>
             <ul class="mobile-menu-total hide">
-               <li class="mobile-menu">Profissionais
-                  <ul class="mobile-submenu">
-                     <li>Próximas Reuniões</li>
-                     <!--<li>Converse com eles</li>-->
-                  </ul>
+               <li class="mobile-menu">
+                  <a href="student-life.html">Student Life</a>
                </li>
-               <li class="mobile-menu">Student Life
-                  <ul class="mobile-submenu">
-                     <li>Cursos</li>
-                     <li>Faculdades</li>
-                     <li><a href="../html/student-life.html">Trilhas Profissionais</a></li>
-                  </ul>
-               </li>
+               <li class="mobile-menu"><a href="off-focus/connections.html">Conexões</a></li>
                <li class="mobile-menu">Comunidade
                   <ul class="mobile-submenu">
-                     <li>Instituições</li>
-                     <li>Empresas</li>
-                     <li>Dicas</li>
-                     <li>Principais Dúvidas</li>
+                     <li><a href="error-pages/not-ready.html">Forúm</a></li>
                   </ul>
                </li>
             </ul>
          </div>
          <div class="nav-left">
             <div class="nav-logo">
-               <a href="../html/index.html"><img src="../assets/logo/low-quality-logo.png" alt="logo"></a>
+               <a href="../html/index.html"><img src="../assets/logo/logo-no-details.png" alt="logo"></a>
             </div>
             <ul class="menu-area">
-               <li class="menu">Profissionais
-                  <ul class="submenu">
-                     <li>Próximas reuniões</li>
-                     <li>Fale com Eles</li>
-                  </ul>
+               <li class="menu">
+                  <a href="student-life.html">Student Life</a>
                </li>
-               <li class="menu">Student Life
-                  <ul class="submenu">
-                     <li>Trilhas Profissionais</li>
-                     <li>Faculdades</li>
-                  </ul>
-               </li>
-
+               <li class="menu"><a href="off-focus/connections.html">Conexões</a></li>
                <li class="menu">Comunidade
                   <ul class="submenu">
-                     <li>Instituições</li>
-                     <li>Empresas</li>
-                     <li>Dicas</li>
-                     <li>Principais Dúvidas</li>
+                     <li><a href="error-pages/not-ready.html">Forúm</a></li>
                   </ul>
                </li>
                </li>
@@ -93,7 +75,7 @@
          <input type="submit" id="send-search" value="">
       </form>
    </section>
-
+   <script src="../js/navbar.js"></script>
    <!-------End Navbar------->
    <header>
       <section class="atractive">
@@ -109,10 +91,7 @@
 
 
    <!-------Ads------->
-
-   <a href="#top-return">
-      <div class="top-return"></div>
-   </a>
+   <a href="#top-return"><div class="top-return"></div></a>
    <!-------Ads------->
 
    <main>
@@ -121,7 +100,7 @@
 
 
       <section class="student-life">
-         <i class="fi fi-rr-tram"></i>
+         <img src="../assets/logo/shiba 3.png" alt="">
          <div class="student-life-text">
             <h2 class="title-gg">Student life</h2>
             <p>Trilhe uma jornada de conhecimento com o nosso Student Life, e tenha um cronograma imersivo para alcançar
@@ -153,7 +132,7 @@
 
       <section class="final-main-text">
          <h4 class="title-m">Precisa de um Plano?</h4>
-         <a class="title" href="student-life.html">Vamos Trabalhar Juntos →</a>
+         <a class="title link" href="student-life.html">Vamos Trabalhar Juntos →</a>
       </section>
    </main>
    <!-------End Main------->
@@ -184,24 +163,21 @@
             </div>
          </div>
          <div class="footer-media">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/newronn_"><i class="fab fa-instagram"></i></a>
-            <!--<a href="#"><i class="fab fa-whatsapp"></i></a>
-                <a href="#"><i class="fab fa-telegram-plane"></i></a>-->
+            <a href="#"><i class="fi fi-brands-facebook"></i></a>
+            <a href="https://www.instagram.com/newronn_"><i class="fi fi-brands-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/newron-suporte-b71759243/#experience"><i
+                  class="fi fi-brands-linkedin"></i></a>
          </div>
          <div class="footer-line"></div>
          <div class="end">
             <p class="par-m">Encontre seu caminho com</p>
-            <!--#top-return--><a href="../html/thanks-page.html"><img src="../assets/logo/logo.png" alt="logo"></a>
+            <!--#top-return--><a href="#top-return"><img src="../assets/logo/logo.png" alt="logo"></a>
             <p class="par-m">Newron</p>
          </div>
       </section>
 
    </footer>
    <!-------End Footer------->
-   <script src="../js/index.js">
-   </script>
 </body>
 
 </html>

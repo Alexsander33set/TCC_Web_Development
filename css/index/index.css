@@ -218,9 +218,11 @@ main {
   width: 100%;
 }
 
-.fi-rr-tram {
+.student-life img {
   color: #121212;
-  font-size: clamp(240px, 17vw, 700px);
+  width: clamp(240px, 18vw, 700px);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .student-life-text {
@@ -312,11 +314,20 @@ main {
   margin-top: 5rem;
   color: var(--primary-strong);
   font-weight: 400;
-  font-size: clamp(1.8rem, 4vw, 5rem);
+  font-size: clamp(1.8rem, 3vw, 5rem);
 }
 
 .final-main-text a {
-  font-size: clamp(2rem, 5vw, 5rem);
+  position: relative;
+  font-size: clamp(2rem, 4vw, 5rem);
+  color: black;
+}
+
+.final-main-text a:before {
+  transition: 0.8s;
+}
+
+.final-main-text a:hover {
   color: black;
 }
 
@@ -329,7 +340,7 @@ main {
   float: right;
   height: 6vh;
   width: 6vh;
-  background: rgba(0, 0, 0, 0.8) url(/assets/Icons/icons8-chevron-96.png) no-repeat center;
+  background: rgba(0, 0, 0, 0.8) url(../../assets/Icons/icons8-chevron-96.png) no-repeat center;
   background-size: 70%;
   border-radius: 30%;
   transition: 1s;
@@ -373,7 +384,7 @@ main {
   }
 }
 @media (max-width: 800px) {
-  .fi-rr-tram {
+  .student-life img {
     display: none;
   }
 

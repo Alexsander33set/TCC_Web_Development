@@ -1,37 +1,4 @@
-/*Start-Search-bar*/
-const btn_mobile = document.querySelector('#nav_mobile_menu')
-const mobile_menu = document.querySelector('.hide')
-const btn_menu = document.querySelector('.fi-rr-menu-burger')
-const btn_exit = document.querySelector('.fi-rr-cross')
-
-const search_button = document.querySelector('.fi-rr-search')
-const search_window = document.querySelector('.section-search')
-
-btn_menu.onclick = ()=>{
-    mobile_menu.classList.toggle("hide"),
-    btn_exit.style.display ="block"
-    btn_menu.style.display ="none"
-}
-
-btn_exit.onclick = ()=>{
-    mobile_menu.classList.toggle("hide"),
-    btn_exit.style.display ="none"
-    btn_menu.style.display ="block"
-}
-
-search_button.onclick = ()=>{
-    search_window.classList.toggle('hide')
-
-}
-/*End-Search-bar*/
-
-
-
-
-
-
-
-
+// Switch Text
 
 let time = 8000,
     currentImageIndex = 0,
@@ -71,34 +38,53 @@ const mouse = document.querySelector('.mouse')
  mouse.style.top = position.pageY + 'px';
 })
 
-/*------------------------------------------------------------------------------------------------------------------------*/ 
+/*---------Close-Header-Links---------------------------------------------------------------------------------------------------------------*/ 
+
+function links_close(){
+    const close_links = document.querySelector(".header-links .fi-rr-cross-small")
+    history.go(-1)
+}
 
 /*Card-Selector*/
 const beg = document.querySelector('#beg')
 const int = document.querySelector('#int')
 const pro = document.querySelector('#pro')
 
-
-function beginner() 
-{ 
-    window.location.href = "http://127.0.0.1:5501/html/student-life.html#beginner"; 
-    beg.checked="checked"
-}
-function intermediate() 
-{ 
-    window.location.href = "http://127.0.0.1:5501/html/student-life.html#intermediate"; 
-    int.checked="checked"
-}
-function profissional() 
-{ 
-    window.location.href = "http://127.0.0.1:5501/html/student-life.html#profissional"; 
-    pro.checked="checked"
-}
-
-
-
-
-
-/*End-Card-Selector*/
-
+  function beginner() 
+  { 
+      window.location.href = "http://127.0.0.1:5500/html/student-life.html#beginner";    
+      beg.checked="checked"
+  }
+  function intermediate() 
+  { 
+      window.location.href = "http://127.0.0.1:5500/html/student-life.html#intermediate"; 
+      int.checked="checked"
+  }
+  function profissional() 
+  { 
+      window.location.href = "http://127.0.0.1:5500/html/student-life.html#profissional"; 
+      pro.checked="checked"
+  }
+//  function beginner() 
+//  { 
+//      window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#beginner";
+//      beg.checked="checked";
+//  }
+//  function intermediate() 
+//  { 
+//      window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#intermediate";
+//      int.checked="checked";
+//  }
+//  function profissional() 
+//  { 
+//      window.location.href = "https://newron.com.br.s3.br-sao.cloud-object-storage.appdomain.cloud//platform-main/html/student-life.html#profissional";
+//      pro.checked="checked";
+//  }
 /*------------------------------------------------------------------------------------------------------------------------*/ 
+const sl_default = document.querySelector('#sl-default')
+const sl_dev_web = document.querySelector('#sl-dev-web')
+function show_dev_web()
+{
+    sl_default.classList.add('hide')
+    sl_dev_web.classList.remove('hide')
+}

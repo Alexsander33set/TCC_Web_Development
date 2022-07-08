@@ -24,7 +24,7 @@
 }
 
 /*---end-variables---*/
-* {
+*,*::before,*::after {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -33,7 +33,9 @@
 }
 
 body {
-  width:clamp(500px,100vw,100vw) ;
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
   overflow-x: hidden;
   background: var(--background-light);
   font-family: 'Poppins', sans-serif;
@@ -49,10 +51,31 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2BC4A2;
+  background-color: var(--primary-low);
   border-radius: 3px;
 }
+/*---------------------------Preloader---------------------------*/
+.loader{
+  position: absolute;
+  display: block;
+  width: 100vw;
+  height: 100%;
+  pointer-events: none;
+  background: black;
+  z-index:100000000000;
+}
 
+.loader-active{
+  animation: loader-out 1s forwards;
+}
+
+@keyframes loader-out{
+  to{
+    opacity: 0;
+    visibility: 0;
+  }
+
+}
 /*---------------------------Vertical-Line---------------------------*/
 .ver-line {
   width: 1px;
@@ -63,74 +86,34 @@ body {
 
 /*---Default---*/
 h4 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.65rem;
-  line-height: 150%;
-  text-transform: uppercase;
+  font-size: 1.65rem;line-height: 150%;text-transform: uppercase;
 }
 
-p {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.27rem;
-  line-height: 140%;
+p {font-size: 1.27rem;line-height: 140%;}
+
+.title-ss {font-size: 1.5rem;line-height: 28px;}
+
+.title-s {font-size: 1.25rem;line-height: 24px;
 }
 
-.title-ss {
-  font-size: 1.5rem;
-  line-height: 28px;
-}
+.title-mm {font-size: 2.5rem;line-height: 44px;}
 
-.title-s {
-  font-size: 1.25rem;
-  line-height: 24px;
-}
+.title-m {font-size: 2rem;line-height: 36px;}
 
-.title-mm {
-  font-size: 2.5rem;
-  line-height: 44px;
-}
+.title-gg {font-size: 4rem;line-height: 72px;}
 
-.title-m {
-  font-size: 2rem;
-  line-height: 36px;
-}
+.title-g {font-size: 3rem;line-height: 56px;}
 
-.title-gg {
-  font-size: 4rem;
-  line-height: 72px;
-}
+.par-g {font-size: 1.125rem;line-height: 36px;}
 
-.title-g {
-  font-size: 3rem;
-  line-height: 56px;
-}
+.par-m {font-size: 1rem;line-height: 24px;}
 
-.par-g {
-  font-size: 1.125rem;
-  line-height: 36px;
-}
+.par-s {font-size: .875rem;line-height: 22px;}
 
-.par-m {
-  font-size: 1rem;
-  line-height: 24px;
-}
+.par-ss {font-size: .75rem;line-height: 18px;}
 
-.par-s {
-  font-size: .875rem;
-  line-height: 22px;
-}
-
-.par-ss {
-  font-size: .75rem;
-  line-height: 18px;
-}
-
-.link {
-  position: relative;
-  text-decoration: none;
-  -webkit-transition: .4s;
-  transition: .4s;
-}
+/*---Link---*/
+.link {position: relative;text-decoration: none;-webkit-transition: .4s;transition: .4s;}
 
 .link:before {
   content: '';
@@ -150,12 +133,9 @@ p {
 
 .link:hover::before {
   width: 100%;
-}
+} */
 
-ul, li {
-  list-style: none;
-  cursor: pointer;
-}
+ul, li {list-style: none;cursor: pointer;}
 
 /*---Default---*/
 /*-----------------------------------------------------Links-----------------------------------------------------*/
@@ -167,10 +147,10 @@ a {
 }
 
 a:hover {
-  color: var(--primary-strong);
+  color: var(--primary-color);
 }
 
-.navbar a:before, .final-main-text a:before {
+.navbar a:before{
   content: '';
   position: absolute;
   left: 0;
@@ -182,7 +162,7 @@ a:hover {
   transition: all .4s;
 }
 
-a:hover::before {
+.navbar a:hover::before {
   width: 100%;
 }
 

@@ -1,0 +1,165 @@
+/*General----------------------------------------------------*/
+@import url(../../css/default/style.css);
+*{margin: 0;padding: 0;box-sizing: border-box;}
+
+body{
+    background-color: rgba(0, 0, 6, 0.900);
+    width: 100%;
+    height: 100%; 
+    opacity: 0;
+    animation: show 1s forwards; 
+    overflow: hidden;
+}
+
+@keyframes show {from{opacity: 0;} to{opacity: 1;}}
+
+a{text-decoration: none;}
+a::before{display: none;}
+
+.bg-details{
+    height: 25rem;width: 25rem;border-radius: 50%;
+    background-color: var(--primary-color);
+    transform: translate(-50%,-50%);
+    position: absolute;
+}
+
+.circle1{left: 0;top: 0;}
+.circle2{top: 100vh;left: 100vw;}
+.circle2 p{
+    margin: 42% 0 0 25%;
+    color: rgba(0, 0, 0, 0.377);
+}
+
+
+
+.return{
+    position:absolute;top: 0;left: 0;margin: 2% 5% 0 2%;
+    background: transparent;
+    font-size: 1.725rem;color: var(--background-light);
+    cursor: pointer;
+    transition: .3s;z-index: 1;
+  }
+
+.return:hover{transform: scale(1.2);}
+/*Section The Box----------------------------------------------------*/
+.login-area{
+    position: absolute;
+    left: 50vw;top: 50vh;
+    transform: translate(-50% , -50%);
+    z-index: 1;
+    
+   /*--------Style------------*/ 
+   background-color: white;
+    padding: 3rem;
+    text-align: center;
+    border-radius: 10px;
+    animation: alternance 3s infinite alternate ease-in-out;
+}
+
+@keyframes alternance{
+    to{
+        box-shadow: 0 0 20px -3px gray;
+    }
+}
+/*---text-top---*/
+.texto h1{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    line-break: strict;
+    white-space: nowrap;
+    margin-bottom: 5%;
+}
+/*---Form---*/
+input{
+    height: 5vh;
+    margin-bottom: 2%;
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid gray;
+    transition: 0.3s;
+}
+input:hover{background-color: #f5f5f5;border-radius: 5px 5px 0 0;}
+input:focus{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #2BC4A2;
+}
+
+#entrar{
+    background: var(--primary-strong);
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1rem;font-family: 'Poppins', sans-serif;
+}
+
+#entrar:hover{
+    border: 1px solid var(--primary-strong);
+    color: var(--primary-strong);
+    background: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+/*---End-Form---*/
+/*---Sign-up---*/
+.sign-up{
+    display: flex;align-items: center; justify-content: center;
+    height: 5vh;width: 100%;
+    margin: auto auto 2% auto;
+    transition: 0.3s;
+
+    border: 1px solid var(--primary-strong);
+    
+    background: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.sign-up a{
+    width: 100%;height: 100%;
+    font: 1rem 'Poppins', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--primary-strong);
+}
+.sign-up:hover{background:var(--primary-strong);}
+.sign-up:hover > a{color: white;}
+/*---final-Section-Links---*/
+.suporte {
+    display: flex;justify-content: space-between;
+    width: 100%;
+}
+
+.suporte a{
+    width: 50%;
+    color: #242424;
+    font: 1rem;
+    
+}
+.suporte a:nth-of-type(1){text-align:left;}
+.suporte a:nth-of-type(2){text-align:right;}
+.suporte a:hover{
+    color: var(--primary-strong);
+}
+/*--------Media Query------------*/
+@media (max-width: 865px) {
+    .login-area{
+        width:80%;
+    }
+    .texto h1{
+        white-space: inherit;
+    }    
+}
+@media (max-width: 450px) {
+    .login-area{
+        width: 95%;
+    }    
+}
+
+@media (prefers-color-scheme:light){
+  body{
+        background: var(--background-light2);
+    }
+}

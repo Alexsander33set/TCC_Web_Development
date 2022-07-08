@@ -10,8 +10,7 @@ footer h3 {
   font-weight: 500;
 }
 
-footer p,
-footer a {
+footer :is(p, a) {
   color: #c6c6c6;
   display: block;
 }
@@ -83,11 +82,11 @@ footer a:hover {
 }
 
 .footer-media a:nth-of-type(2):hover {
-  color: #1da1f2;
+  color: #d14090;
 }
 
 .footer-media a:nth-of-type(3):hover {
-  color: #d14090;
+  color: #0e76a8;
 }
 
 .footer-media a {
