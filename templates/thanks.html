@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanks for your attention</title>
+</head>
+<body>
+    <div class="loader"></div><script src="../script/preloader.js"></script>
+    <img src="../src/thanks/thanks.png" alt="">
+    
+    <div></div>
+    
+    
+    
+    
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            opacity: 0;
+            animation: for-left .8s forwards linear;
+        }
+        img{
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        div{
+            content: '';
+            position: absolute;width: 100%;height: 100%;
+            left: 0;top: 0;
+
+            
+        }
+        @keyframes for-left{
+
+            to{
+                opacity: 1;
+            }
+        }
+    </style>
+</body>
+</html>
