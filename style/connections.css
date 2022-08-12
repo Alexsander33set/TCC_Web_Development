@@ -1,25 +1,8 @@
-@import url(../default/style.css);
-@import url(../default/navbar.css);
-@import url(../default/footer.css);
+@import url(default/style.css);
+@import url(default/navbar.css);
+@import url(default/footer.css);
 /*-------------------------------------------Big-Fathers-----------------------------------------------------*/
 /*--------------Variables--------------*/
-:root {
-  --bg-sl:#e6e6e6;
-  --bg-pure-white:white;
-  --sl-text-light:white;
-  --sl-text-light1:#f8f8f8;
-  --sl-text-dark:black;
-  --sl-text-dark1:#121212;
-  --sl-text-dark2:#323232;
-  --sl-par-size:1.125rem;
-  --sl-title-size:clamp(2rem, 1.5vw + 1rem, 6rem);
-  --sl-font-size:clamp(1rem, .8vw + .5rem, 3rem);
-  --header-btn-hover:#363636;
-  --animation-pure-white:white;
-  --primary-strong2:#00614c;
-  /*------navbar------*/
-}
-
 /*--------------Prefer colors--------------*/
 @media (prefers-color-scheme: dark) {
   body {
@@ -35,19 +18,14 @@
     background: var(--background-light);
     color: var(--sl-text-dark1);
   }
+  .section-business .card img {
+    filter: invert(100%);
+  }
 }
 /*--------------code--------------*/
-.navbar {
-  position: relative;
-}
-
 main {
   min-height: 100vh;
-  margin: 5%;
-}
-
-.header {
-  text-align: center;
+  padding: calc(10vh + 5%) 5% 2%;
 }
 
 .section-business {
@@ -62,7 +40,8 @@ main {
 }
 
 .section-business .card img {
-  width: 50%;
+  width: 30%;
+  margin: 10%;
 }
 
 .section-business .card-text {
@@ -75,4 +54,9 @@ main {
 
 .section-business .card-text * {
   color: rebeccapurple;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
 }/*# sourceMappingURL=connections.css.map */

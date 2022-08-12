@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   font-family: "HK Grotesk Bold";
-  src: url(../assets/fonts/FontsFree-Net-HKGrotesk-Bold.woff2);
+  src: url(../../src/fonts/FontsFree-Net-HKGrotesk-Bold.woff2);
 }
 
 /*font-family: 'Poppins', sans-serif;*/
@@ -10,7 +10,7 @@
 /*---variables---*/
 :root {
   --primary-color:#1a9e7f;
-  --primary-low:#4BD8B8;
+  --primary-low:#4BD8B8;/*#55D6BE*/
   --primary-strong:#008568;/*#008A6B*/
   --secondary-color:#00bbfa;
   --secondary-low:#2ECAFF;
@@ -21,6 +21,8 @@
   --original--color:#00ae5c;
   --input-color:rgba(0, 0, 0, 0.6);
   --exported-font:HK Grotesk Bold,'Segoe UI', Roboto, Oxygen, Ubuntu,'Open Sans', 'Helvetica Neue', sans-serif;
+  --default-text-size:1.125rem;
+  --default-text-color-dark:#121212;
 }
 
 /*---end-variables---*/
@@ -39,10 +41,10 @@ body {
   overflow-x: hidden;
   background: var(--background-light);
   font-family: 'Poppins', sans-serif;
-  font-size: 20px;
-  /*color: #e6e6e6;*/
+  font-size: var(--default-text-size);
+  color: var(--default-text-color-dark);
   -webkit-animation: body-show .5s;
-          animation: body-show .5s;
+  animation: body-show .5s;
 }
 
 ::-webkit-scrollbar {
@@ -56,25 +58,31 @@ body {
 }
 /*---------------------------Preloader---------------------------*/
 .loader{
-  position: absolute;
-  display: block;
-  width: 100vw;
-  height: 100%;
+  position: fixed;width: 100%;height: 100%;
+  display: flex;align-items: center;justify-content: center;
   pointer-events: none;
   background: black;
-  z-index:100000000000;
+  z-index:100000;
+}
+.loader img{
+  height: 80%;opacity:0;
+  animation: hello-again 1s infinite alternate ease forwards;
 }
 
+@keyframes hello-again{
+  to{opacity: 1;}
+}
 .loader-active{
   animation: loader-out 1s forwards;
 }
 
 @keyframes loader-out{
-  to{
-    opacity: 0;
-    visibility: 0;
-  }
+  to{opacity: 0;visibility: 0;}
 
+}
+/*-----Media Query - loader correction of small devices-----*/
+@media (max-width:600px){
+  .loader img{height: auto;width:70%;}
 }
 /*---------------------------Vertical-Line---------------------------*/
 .ver-line {
@@ -148,22 +156,6 @@ a {
 
 a:hover {
   color: var(--primary-color);
-}
-
-.navbar a:before{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  background-color: var(--primary-color);
-  width: 20%;
-  height: 2px;
-  -webkit-transition: all .4s;
-  transition: all .4s;
-}
-
-.navbar a:hover::before {
-  width: 100%;
 }
 
 button{border: none; outline: none;}

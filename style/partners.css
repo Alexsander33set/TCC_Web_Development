@@ -1,0 +1,62 @@
+@import url(default/style.css);
+@import url(default/navbar.css);
+@import url(default/footer.css);
+/*-------------------------------------------Big-Fathers-----------------------------------------------------*/
+/*--------------Variables--------------*/
+/*--------------Prefer colors--------------*/
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--background-dark);
+    color: var(--sl-text-light1);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color:black;
+  }
+  body {
+    background: var(--background-light);
+    color: var(--sl-text-dark1);
+  }
+  .section-business .card img {
+    filter: invert(100%);
+  }
+}
+/*--------------code--------------*/
+main {
+  min-height: 100vh;
+  padding: calc(10vh + 5%) 5% 2%;
+}
+
+.section-business {
+  width: 100%;
+  border: 2px dotted;
+}
+
+.section-business .card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-business .card img {
+  width: 30%;
+  margin: 10%;
+}
+
+.section-business .card-text {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-business .card-text * {
+  color: rebeccapurple;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+}/*# sourceMappingURL=partners.css.map */

@@ -1,0 +1,208 @@
+@import url(default/style.css);
+@import url(default/navbar.css);
+@import url(default/footer.css);
+:root {
+  /*navbar-fixed-variables*/
+  --text-color: white;
+  --effect-color: white;
+  --submenu-text-color: white;
+  --search-text-color: white;
+  --default-text--color:#000;
+  --default-border-color:lightgray;
+}
+
+/*----------Scroll-animation----------*/
+.atractive, .student-life, .advantages div, .final-main-text {
+  visibility: hidden;
+}
+
+/*@media (prefers-color-scheme:dark){
+  *  body{
+        background: var(--background-dark);
+    }
+    p{
+        color: #e8e6e9;
+    }
+}
+*/
+/*-------------------------------------------Big-Fathers-----------------------------------------------------*/
+body {
+  color: var(--background-light2);
+}
+
+p {
+  color: #242424;
+}
+
+header {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--background-dark);
+}
+
+main {
+  padding: 2%;
+  margin: 0;
+}
+
+/*-------------------------------------------Header-----------------------------------------------------*/
+header {
+  background: var(--background-dark) linear-gradient(to bottom, #030616, #091241);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 49vh;
+  width: 100%;
+  gap: 5%;
+  padding: 0 10%;
+  -webkit-animation: city_lights 4s alternate infinite;
+          animation: city_lights 4s alternate infinite;
+}
+
+@-webkit-keyframes city_lights {
+  to {
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes city_lights {
+  to {
+    filter: brightness(1.5);
+  }
+}
+.header-text {
+  text-transform: uppercase;
+  font-size: 2vw;
+  position: relative;
+  width: 67%;
+  text-align: center;
+}
+
+.header-text h1 {
+  display: none;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  font-size: clamp(2rem, 2vw + 1rem, 5vw);
+  color: var(--sl-text-light);
+  -webkit-animation: in-out 4s alternate infinite;
+          animation: in-out 4s alternate infinite;
+}
+
+@-webkit-keyframes in-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes in-out {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.header-text h1.selected {
+  display: block;
+}
+
+header img {
+  width: 23%;
+  -webkit-animation: shining 4s alternate infinite;
+          animation: shining 4s alternate infinite;
+}
+
+@-webkit-keyframes shining {
+  from {
+    filter: none;
+  }
+  to {
+    filter: drop-shadow(0 0 20px var(--animation-pure-white));
+  }
+}
+
+@keyframes shining {
+  from {
+    filter: none;
+  }
+  to {
+    filter: drop-shadow(0 0 20px var(--animation-pure-white));
+  }
+}
+/*End-Header-------------------------------------------------------------------*/
+main {
+  margin: 0 auto;
+  min-height: 500px;
+  width: 90%;
+  color: var(--default-text--color);
+}
+
+.comments {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+  gap: 50px;
+  border: 1px dotted;
+}
+
+.comments article {
+  background: white;
+  border: 1px solid var(--default-border-color);
+  padding: 2%;
+}
+
+.comments .user-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments .user-info :is(h5, p) {
+  font-size: 18px;
+  color: var(--default-text--color);
+}
+
+.comments .user-info p {
+  font-size: 18px;
+}
+
+.comments .comment p {
+  font-size: 1rem;
+}
+
+/*----------input----------*/
+.comments .comment p textarea {
+  width: 100%;
+  padding: 1%;
+  resize: vertical;
+  background: #f5f5f5;
+}
+
+.comments .comment p textarea:focus {
+  background: white;
+  outline-color: var(--primary-color);
+}
+
+.comments .comment input[type=submit] {
+  float: right;
+  background: var(--primary-color);
+  color: white;
+  font-size: 1rem;
+  padding: 0.3% 1%;
+  border: 1px solid var(--primary-strong);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.comments .comment input[type=submit]:is(:hover, :focus) {
+  background: var(--primary-strong);
+}/*# sourceMappingURL=forum.css.map */

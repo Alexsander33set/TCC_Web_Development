@@ -64,45 +64,40 @@ footer {
 
   /*Footer Media-------------------------------------*/
   .footer-media {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     width: 100%;
   }
   
   .footer-media i {
     height: 4vh;
-    -webkit-transition: all .15s, color;
-    transition: all .15s, color;
+    transition: color .1s,text-shadow .05s;
+
   }
   
-  .footer-media i:hover {
+  .footer-media a:hover {
     -webkit-transform: scale(120%);
     transform: scale(120%);
   }
   
   .footer-media a:nth-of-type(1):hover {
     color: #1877f2;
+    text-shadow: 0 0 30px #1877f2, 0 0 5px black;
   }
   
   .footer-media a:nth-of-type(2):hover {
     color: #d14090;
+    text-shadow: 0 0 30px #d14090, 0 0 5px black;
   }
   
   .footer-media a:nth-of-type(3):hover {
     color: #0e76a8;
+    text-shadow: 0 0 30px #0e76a8, 0 0 5px black;
   }
   
   .footer-media a {
     margin: 0 1%;
     font-size: 1.27rem;
-  }
-  
-  footer a::before {
-    content: none;
   }
   
   /*Footer End-------------------------------------*/

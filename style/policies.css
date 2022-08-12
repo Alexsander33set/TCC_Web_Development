@@ -1,0 +1,67 @@
+@import url(default/style.css);
+@import url(default/navbar.css);
+@import url(default/footer.css);
+/*-------User-Color-------*/
+:root {
+  --text-color: #121212;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: var(--background-dark);
+  }
+  :root {
+    --text-color: #f5f5f5;
+  }
+  .paper {
+    box-shadow: 0 0 15px lightgray !important;
+  }
+}
+main {
+  padding: 20vh 10%;
+  padding-bottom: 2%;
+}
+
+.paper {
+  padding: 10%;
+  background: white;
+  box-shadow: 0 0 5px lightgray;
+}
+
+.paper center, h1 {
+  font-size: 27px;
+  padding: 0 0 3% 0;
+}
+
+.paper h4 {
+  font-size: 27px;
+  padding: 0 0 2% 0;
+}
+
+.paper span {
+  font-weight: 600;
+}
+
+.paper a {
+  color: var(--primary-strong);
+  font-weight: 400;
+}
+
+.paper a:hover {
+  text-decoration: underline;
+}
+
+.paper p {
+  font-size: 1.125rem;
+  letter-spacing: 1px;
+  line-height: 140%;
+  font-weight: 400;
+  color: #242424;
+}
+
+@media (max-width: 800px) {
+  main {
+    padding: 10vh 5%;
+    padding-bottom: 2%;
+  }
+}/*# sourceMappingURL=policies.css.map */

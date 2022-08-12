@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "formulahendry.auto-rename-tag",
+        "octref.vetur",
+        "syler.sass-indented",
+        "pkief.material-icon-theme",
+        "ms-vsliveshare.vsliveshare",
+        "ritwickdey.liveserver",
+        "glenn2223.live-sass",
+        "visualstudioexptteam.vscodeintellicode",
+        "dracula-theme.theme-dracula",
+        "formulahendry.auto-rename-tag",
+        "ms-ceintl.vscode-language-pack-pt-br",
+        "eamodio.gitlens",
+        "github.github-vscode-theme",
+        "equinusocio.vsc-community-material-theme",
+
+    ]
+}

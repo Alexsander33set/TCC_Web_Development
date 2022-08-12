@@ -1,44 +1,39 @@
 /*General----------------------------------------------------*/
-@import url(../../css/default/style.css);
+@import url(default/style.css);
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0;padding: 0;box-sizing: border-box;text-decoration: none;
 }
 
 body{
     background-color: rgba(0, 0, 6, 0.900);
-    width: 100%;
-    height: 100%; 
-    opacity: 0;
-    animation: show 1s forwards; 
-    overflow: hidden;
+    width: 100%;height: 100%; overflow: hidden;
 }
-
-@keyframes show {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
-a{text-decoration: none;}
-a::before{display: none;}
-
-.bg-details{
-    height: 25rem;width: 25rem;border-radius: 50%;
-    background-color: var(--primary-color);
-    transform: translate(-50%,-50%);
+button.return-last-page{
     position: absolute;
+    top:15px;left: 15px;
+    font-size: 2rem;
+    z-index: 2;
+    color: var(--background-light);
+    transition: transform .8s;
+    cursor: pointer;
+    background: transparent;
+}
+button.return-last-page:hover{animation: soft-movimet 2s infinite alternate cubic-bezier(0.68, -0.6, 0.32, 1.6)}
+@keyframes soft-movimet{
+    50%{transform: translateX(20px);}
+    100%{transform: translateX(0);}
+}
+/*---------details---------*/
+.bg-details{
+    position: absolute;
+    height: 25rem;width: 25rem;border-radius: 50%;
+    transform: translate(-50%,-50%);
+    background: var(--primary-color);
 }
 
 .circle1{left: 0;top: 0;}
 .circle2{top: 100vh;left: 100vw;}
-.circle2 p{
-    margin: 42% 0 0 25%;
-    color: rgba(0, 0, 0, 0.377);
+.circle2 p{margin: 42% 0 0 25%;color: rgba(0, 0, 0, 0.4);
 }
 
 
@@ -63,14 +58,9 @@ a::before{display: none;}
     padding: 3rem;
     text-align: center;
     border-radius: 10px;
-    animation: alternance 3s infinite alternate ease-in-out;
+    box-shadow: 0 0 20px -3px gray;
 }
 
-@keyframes alternance{
-    to{
-        box-shadow: 0 0 20px -3px gray;
-    }
-}
 /*---text-top---*/
 .texto h1{
     font-family: 'Poppins', sans-serif;
@@ -79,6 +69,7 @@ a::before{display: none;}
     line-break: strict;
     white-space: nowrap;
     margin-bottom: 5%;
+    color: #121212;
 }
 /*---Form---*/
 input{
@@ -131,6 +122,7 @@ input:focus{
     cursor: pointer;
 }
 .sign-up a{
+    display: grid;place-items: center;
     width: 100%;height: 100%;
     font: 1rem 'Poppins', sans-serif;
     text-transform: uppercase;
@@ -139,7 +131,19 @@ input:focus{
 }
 .sign-up:hover{background:var(--primary-strong);}
 .sign-up:hover > a{color: white;}
-/*---final-Section-Links---*/
+
+
+
+.alert{
+    background: transparent;
+    margin: 15px 0; 
+}
+.alert-success{
+    color: var(--primary-color);
+}.alert-danger{
+    color: var(red);
+}
+/*---Section-Links---*/
 .suporte {
     display: flex;justify-content: space-between;
     width: 100%;
